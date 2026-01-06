@@ -16,9 +16,14 @@
             version = "0.0.365"
         },
         {
-            name = "🚇 dead god land",
+            name = "Dead god land (soon)",
             link = "",
-            version = "0.0.365"
+            version = ""
+        },
+        {
+            name = "Live or die (soon)",
+            link = "",
+            version = ""
         }
         
     },
@@ -30,4 +35,5 @@
     }
 
 }
+
 
