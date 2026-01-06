@@ -14,7 +14,13 @@
             name = "🚇 Metro 2050 Survival [SOON]",
             link = "",
             version = "0.0.365"
+        },
+        {
+            name = "🚇 Metro 2050 Survival [SOON]",
+            link = "",
+            version = "0.0.365"
         }
+        
     },
     
     DEVELOPER = {
@@ -22,4 +28,5 @@
         youtube = "@DraboyGaming",
         Telegram = "@DraboyGaming"
     }
+
 }
