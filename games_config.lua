@@ -16,7 +16,7 @@
             version = "0.0.365"
         },
         {
-            name = "🚇 Metro 2050 Survival [SOON]",
+            name = "🚇 dead god land",
             link = "",
             version = "0.0.365"
         }
@@ -30,3 +30,4 @@
     }
 
 }
+
