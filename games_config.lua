@@ -1,4 +1,4 @@
-{
+return {
     GAMES = {
         {
             name = "🎃 Grim Soul: Dark Fantasy",
@@ -25,15 +25,11 @@
             link = "",
             version = ""
         }
-        
     },
-    
+
     DEVELOPER = {
         name = "@DraboyGaming",
         youtube = "@DraboyGaming",
         Telegram = "@DraboyGaming"
     }
-
 }
-
-
