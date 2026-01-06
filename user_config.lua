@@ -1,12 +1,11 @@
 {
     PASSWORDS = {
         -- PERMANENT PASSWORDS
-        "joday",
-        "VIP202418272",
+        "JODAY",
+        --"VIP2024",
         
         -- TRIAL PASSWORDS
-        {"banten", "2026-01-31"},
-        {"NEWUSER252736", "2024-12-25"}
+        {"BANTEN", "2026-01-31"},
+        --{"NEWUSER", "2024-12-25"}
     }
-
 }
