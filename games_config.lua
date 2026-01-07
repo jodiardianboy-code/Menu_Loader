@@ -13,11 +13,12 @@
         {
             name = " ╰▶ 🚇 Metro 2050 Survival",
             version = "0.0.365",
-            link = ""
+            link = "https://raw.githubusercontent.com/jodiardianboy-code/Menu_Loader/refs/heads/main/metro.lua"
         },
         
     }
 }
+
 
 
 
