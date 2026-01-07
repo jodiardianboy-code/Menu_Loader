@@ -8,7 +8,7 @@
         {
             name = " ╰▶ 🧟 Last Day on Earth: Survival",
             version = "1.43.0",
-            link = ""
+            link = "https://raw.githubusercontent.com/jodiardianboy-code/Menu_Loader/refs/heads/main/ldoe.lua"
         },
         {
             name = " ╰▶ 🚇 Metro 2050 Survival",
@@ -18,6 +18,7 @@
         
     }
 }
+
 
 
 
