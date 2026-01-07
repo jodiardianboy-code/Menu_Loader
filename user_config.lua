@@ -1,4 +1,4 @@
-{
+return {
     PASSWORDS = {
         "JODAY",
         "VIP2024",
@@ -7,4 +7,3 @@
         {"FREEUSER", "2026-12-25"}
     }
 }
-
