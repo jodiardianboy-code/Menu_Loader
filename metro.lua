@@ -2082,14 +2082,14 @@ function toggle_no_damage()
     end
 
     if #METHOD.DAMAGE.ADDR == 0 then
-        gg.toast("🔍 Finding TakeDamage...")
+        gg.toast("🔍 Finding ...")
         METHOD.DAMAGE.ADDR = findMethod(
             METHOD.DAMAGE.CLASS,
             METHOD.DAMAGE.NAME
         )
 
         if #METHOD.DAMAGE.ADDR == 0 then
-            gg.alert("❌ TakeDamage not found\nMasuk map & kena damage dulu")
+            gg.alert("❌ not found\n go to map & take damage first")
             return
         end
     end
@@ -2142,8 +2142,8 @@ function toggle_survival()
 
         if #METHOD.HUNGER.ADDR == 0 or #METHOD.WATER.ADDR == 0 then
             gg.alert(
-                "❌ get_hunger / get_water not found\n\n" ..
-                "Masuk map & buka status survival dulu"
+                "❌ not found\n\n" ..
+                "go to map first"
             )
             return
         end
@@ -2213,14 +2213,14 @@ function toggle_no_weapon_durability()
 
     -- FIND METHOD IF NOT FOUND
     if #METHOD.WEAPON_DURA.ADDR == 0 then
-        gg.toast("🔍 Finding ChangeDurabilityWeapon...")
+        gg.toast("🔍 Finding ...")
         METHOD.WEAPON_DURA.ADDR = findMethod(
             METHOD.WEAPON_DURA.CLASS,
             METHOD.WEAPON_DURA.NAME
         )
 
         if #METHOD.WEAPON_DURA.ADDR == 0 then
-            gg.alert("❌ ChangeDurabilityWeapon not found")
+            gg.alert("❌  not found")
             return
         end
     end
@@ -2275,14 +2275,14 @@ function toggle_no_armor_durability()
     
     -- FIND METHOD
     if #METHOD.ARMOR_DURA.ADDR == 0 then
-        gg.toast("🔍 Finding ReduceArmorDurabilityOnHit...")
+        gg.toast("🔍 Finding...")
         METHOD.ARMOR_DURA.ADDR = findMethod(
             METHOD.ARMOR_DURA.CLASS,
             METHOD.ARMOR_DURA.NAME
         )
         
         if #METHOD.ARMOR_DURA.ADDR == 0 then
-            gg.alert("❌ ReduceArmorDurabilityOnHit not found")
+            gg.alert("❌  not found")
             return
         end
     end
@@ -2381,14 +2381,14 @@ METHOD.COLLECTION = {
 ----------------------------------------------------
 function patch_was_unit_collected()
     if #METHOD.COLLECTION.WAS_COLLECTED.ADDR == 0 then
-        gg.toast("🔍 Finding WasUnitCollected...")
+        gg.toast("🔍 Finding ...")
         METHOD.COLLECTION.WAS_COLLECTED.ADDR = findMethod(
             METHOD.COLLECTION.WAS_COLLECTED.CLASS,
             METHOD.COLLECTION.WAS_COLLECTED.NAME
         )
         
         if #METHOD.COLLECTION.WAS_COLLECTED.ADDR == 0 then
-            gg.alert("❌ WasUnitCollected not found")
+            gg.alert("❌  not found")
             return false
         end
     end
@@ -2428,7 +2428,7 @@ function patch_was_unit_collected()
     end
     
     sv(patch)
-    gg.toast("✅ WasUnitCollected patched → always TRUE")
+    gg.toast("✅ complete patch")
     return true
 end
 
@@ -2437,14 +2437,14 @@ end
 ----------------------------------------------------
 function patch_is_collection_complete()
     if #METHOD.COLLECTION.IS_COMPLETE.ADDR == 0 then
-        gg.toast("🔍 Finding IsCollectionComplete...")
+        gg.toast("🔍 Finding ...")
         METHOD.COLLECTION.IS_COMPLETE.ADDR = findMethod(
             METHOD.COLLECTION.IS_COMPLETE.CLASS,
             METHOD.COLLECTION.IS_COMPLETE.NAME
         )
         
         if #METHOD.COLLECTION.IS_COMPLETE.ADDR == 0 then
-            gg.alert("❌ IsCollectionComplete not found")
+            gg.alert("❌  not found")
             return false
         end
     end
@@ -2484,7 +2484,7 @@ function patch_is_collection_complete()
     end
     
     sv(patch)
-    gg.toast("✅ IsCollectionComplete patched → always TRUE")
+    gg.toast("✅ complete patched")
     return true
 end
 
@@ -2493,14 +2493,14 @@ end
 ----------------------------------------------------
 function patch_should_give_reward()
     if #METHOD.COLLECTION.SHOULD_GIVE_REWARD.ADDR == 0 then
-        gg.toast("🔍 Finding ShouldGiveRewardForCollection...")
+        gg.toast("🔍 Finding ...")
         METHOD.COLLECTION.SHOULD_GIVE_REWARD.ADDR = findMethod(
             METHOD.COLLECTION.SHOULD_GIVE_REWARD.CLASS,
             METHOD.COLLECTION.SHOULD_GIVE_REWARD.NAME
         )
         
         if #METHOD.COLLECTION.SHOULD_GIVE_REWARD.ADDR == 0 then
-            gg.alert("❌ ShouldGiveRewardForCollection not found")
+            gg.alert("❌  not found")
             return false
         end
     end
@@ -2540,7 +2540,7 @@ function patch_should_give_reward()
     end
     
     sv(patch)
-    gg.toast("✅ ShouldGiveRewardForCollection patched → always TRUE")
+    gg.toast("✅ complete")
     return true
 end
 
@@ -2574,7 +2574,7 @@ function unlock_all_posters_complete()
     if successCount > 0 then
         STATE.COLLECTION_ALL = true
         gg.alert("✅ SUCCESS!\n\n" ..
-                successCount .. " methods patched.\n\n" ..
+                successCount .. "\n\n" ..
                 "TEST:\n" ..
                 "1. Buka collection menu\n" ..
                 "2. Semua poster harus ter-unlock\n" ..
@@ -2721,18 +2721,7 @@ function toggle_free_craft()
         if successCount == 2 then
             gg.toast("🟢 FREE CRAFT ON (2/2 methods)")
             
-            gg.alert(
-                "🎯 FREE CRAFT ACTIVATED!\n\n" ..
-                "Methods patched:\n" ..
-                "1. ✅ CanCraft() - Always returns TRUE\n" ..
-                "2. ✅ CanRemoveRequiredItems() - No materials needed\n\n" ..
-                "💡 What this means:\n" ..
-                "• You can craft ANY blueprint\n" ..
-                "• No materials required\n" ..
-                "• Still need money (if any)\n" ..
-                "• Still need inventory space\n\n" ..
-                "Test it now!"
-            )
+           
         else
             gg.toast("🟢 FREE CRAFT ON (" .. successCount .. "/2 methods)")
             gg.alert(
@@ -2744,11 +2733,8 @@ function toggle_free_craft()
     else
         gg.alert(
             "❌ FREE CRAFT FAILED\n\n" ..
-            "Could not find crafting methods!\n\n" ..
-            "Try this:\n" ..
-            "1. Open crafting menu in game\n" ..
-            "2. Select an item to craft\n" ..
-            "3. Try enabling again"
+           
+            "Try enabling again"
         )
     end
 end
@@ -2803,7 +2789,7 @@ function toggle_free_build()
     -- ================= METHOD 1: IsRequiredInventoryEnough =================
     -- Method ini cek apakah bahan cukup untuk building
     if #METHOD.IS_REQUIRED_INVENTORY_ENOUGH.ADDR == 0 then
-        gg.toast("🔍 Finding IsRequiredInventoryEnough...")
+        gg.toast("🔍 Finding ...")
         METHOD.IS_REQUIRED_INVENTORY_ENOUGH.ADDR = findMethod(
             METHOD.IS_REQUIRED_INVENTORY_ENOUGH.CLASS,
             METHOD.IS_REQUIRED_INVENTORY_ENOUGH.NAME
@@ -2844,7 +2830,7 @@ function toggle_free_build()
             sv(patch)
             successCount = successCount + 1
             foundCount = foundCount + #METHOD.IS_REQUIRED_INVENTORY_ENOUGH.ADDR
-            gg.toast("✅ IsRequiredInventoryEnough patched")
+            gg.toast("✅  patched")
         end
     end
     
@@ -2855,7 +2841,7 @@ function toggle_free_build()
 ------  -- ================= METHOD 2: IsBuildingPermitted =================
     -- Method ini cek apakah building boleh ditempatkan
     if #METHOD.CAN_PLACE_BUILDING.ADDR == 0 then
-        gg.toast("🔍 Finding IsBuildingPermitted...")
+        gg.toast("🔍 Finding ...")
         METHOD.CAN_PLACE_BUILDING.ADDR = findMethod(
             METHOD.CAN_PLACE_BUILDING.CLASS,
             METHOD.CAN_PLACE_BUILDING.NAME
@@ -2896,14 +2882,14 @@ function toggle_free_build()
             sv(patch)
             successCount = successCount + 1
             foundCount = foundCount + #METHOD.CAN_PLACE_BUILDING.ADDR
-            gg.toast("✅ IsBuildingPermitted patched")
+            gg.toast("✅  patched")
         end
     end
     
     -- ================= METHOD 3: WriteOffRequeredInventory =================
     -- Method ini untuk konsumsi bahan (optional - bisa skip)
     if #METHOD.WRITE_OFF_REQUIRED_INVENTORY.ADDR == 0 then
-        gg.toast("🔍 Finding WriteOffRequeredInventory...")
+        gg.toast("🔍 Finding ...")
         METHOD.WRITE_OFF_REQUIRED_INVENTORY.ADDR = findMethod(
             METHOD.WRITE_OFF_REQUIRED_INVENTORY.CLASS,
             METHOD.WRITE_OFF_REQUIRED_INVENTORY.NAME
@@ -2944,7 +2930,7 @@ function toggle_free_build()
             sv(patch)
             successCount = successCount + 1
             foundCount = foundCount + #METHOD.WRITE_OFF_REQUIRED_INVENTORY.ADDR
-            gg.toast("✅ WriteOffRequeredInventory patched (no consume)")
+            gg.toast("✅  (no consume)")
         end
     end
     
@@ -2969,8 +2955,7 @@ function toggle_free_build()
     else
         gg.alert(
             "❌ FREE BUILD FAILED\n\n" ..
-            "Could not find building methods!\n\n" ..
-            "4. Game must be in build mode"
+            "Game must be in build mode"
         )
     end
 end
@@ -3017,16 +3002,16 @@ function toggle_free_upgrade()
     -- ================= METHOD 1: IsRequiredInventoryEnough (BuildingModel) =================
     -- INI YANG PENTING! Sama nama dengan di BuildingAssistant, tapi beda class!
     if #METHOD.IS_REQUIRED_INVENTORY_ENOUGH_UPGRADE.ADDR == 0 then
-        gg.toast("🔍 Finding IsRequiredInventoryEnough (BuildingModel)...")
+        gg.toast("🔍 Finding )...")
         METHOD.IS_REQUIRED_INVENTORY_ENOUGH_UPGRADE.ADDR = findMethod(
             METHOD.IS_REQUIRED_INVENTORY_ENOUGH_UPGRADE.CLASS,
             METHOD.IS_REQUIRED_INVENTORY_ENOUGH_UPGRADE.NAME
         )
         
         if #METHOD.IS_REQUIRED_INVENTORY_ENOUGH_UPGRADE.ADDR == 0 then
-            gg.toast("⚠️ IsRequiredInventoryEnough (BuildingModel) not found")
+            gg.toast("⚠️  not found")
         else
-            gg.toast("✅ Found IsRequiredInventoryEnough (BuildingModel)")
+            gg.toast("✅ Found")
         end
     end
     
@@ -3071,16 +3056,16 @@ function toggle_free_upgrade()
     -- ================= METHOD 2: GetNextLevelBuildingBleprint =================
     -- Method untuk mendapatkan blueprint upgrade selanjutnya
     if #METHOD.GET_NEXT_LEVEL_BLUEPRINT.ADDR == 0 then
-        gg.toast("🔍 Finding GetNextLevelBuildingBleprint...")
+        gg.toast("🔍 Finding ...")
         METHOD.GET_NEXT_LEVEL_BLUEPRINT.ADDR = findMethod(
             METHOD.GET_NEXT_LEVEL_BLUEPRINT.CLASS,
             METHOD.GET_NEXT_LEVEL_BLUEPRINT.NAME
         )
         
         if #METHOD.GET_NEXT_LEVEL_BLUEPRINT.ADDR == 0 then
-            gg.toast("⚠️ GetNextLevelBuildingBleprint not found")
+            gg.toast("⚠️not found")
         else
-            gg.toast("✅ Found GetNextLevelBuildingBleprint")
+            gg.toast("✅ Found")
         end
     end
     
@@ -3110,7 +3095,7 @@ function toggle_free_upgrade()
             sv(patch)
             successCount = successCount + 1
             table.insert(foundMethods, "GetNextLevelBuildingBluprint")
-            gg.toast("✅ Upgrade blueprint always available")
+            gg.toast("✅ done")
         end
     end
     
@@ -3125,33 +3110,10 @@ function toggle_free_upgrade()
         
         gg.toast("🟢 FREE UPGRADE ON (" .. #foundMethods .. " methods)")
         
-        gg.alert(
-            "⚡ FREE UPGRADE ACTIVATED!\n\n" ..
-            "Class: BuildingModel\n" ..
-            "Methods patched: " .. methodList .. "\n\n" ..
-            "💡 What this does:\n" ..
-            "• Upgrade floors without materials\n" ..
-            "• Upgrade walls without materials\n" ..
-            "• All building improvements FREE!\n\n" ..
-            "🎮 How to test UPGRADE:\n" ..
-            "1. Select a BUILT floor/wall\n" ..
-            "2. Click UPGRADE/IMPROVE button\n" ..
-            "3. Should work without materials!\n\n" ..
-            "📌 Note: This is DIFFERENT from Free Build!\n" ..
-            "Free Build = Build NEW structures\n" ..
-            "Free Upgrade = Upgrade EXISTING structures"
-        )
+        
     else
         -- COBA CARI ALTERNATIF
-        gg.alert(
-            "❌ FREE UPGRADE FAILED\n\n" ..
-            "Could not find BuildingModel methods!\n\n" ..
-            "Let's try another approach:\n" ..
-            "1. Enter UPGRADE mode in game\n" ..
-            "2. Select a floor to upgrade\n" ..
-            "3. Try enabling Free Build instead\n" ..
-            "4. Upgrade might use same method as Build"
-        )
+       
     end
 end
 ----------------------------------------------------
