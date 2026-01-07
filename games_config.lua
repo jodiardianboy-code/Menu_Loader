@@ -16,13 +16,14 @@
             link = "https://raw.githubusercontent.com/jodiardianboy-code/Menu_Loader/refs/heads/main/metro.lua"
         },
         {
-            name = " ╰▶ 👹 Dead God Land Zombie Games 3D [Tested]",
+            name = " ╰▶ 👹 Dead God Land [Tested]",
             version = "0.0.0349",
             link = "https://raw.githubusercontent.com/jodiardianboy-code/Menu_Loader/refs/heads/main/deadgodland.lua"
         },
         
     }
 }
+
 
 
 
