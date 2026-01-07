@@ -7,6 +7,7 @@ Welcome to Draboy Cloud Loader
 
 • old server is suck !
 • i try new one still laggy, but u can try it
+🔥 Add new game Dead God land
 
 Follow @DraboyGaming
     ]],
