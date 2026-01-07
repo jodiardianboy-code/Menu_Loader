@@ -1,4 +1,5 @@
 {
+    MAINTENANCE = true,
     TITLE = "🔥 DRABOY CLOUD NEWS 🔥",
     MESSAGE = [[
 Welcome to Draboy Cloud Loader
