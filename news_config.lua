@@ -1,4 +1,4 @@
-{
+return{
     
     MAINTENANCE = true,
     TITLE = "🔥 DRABOY CLOUD NEWS 🔥",
