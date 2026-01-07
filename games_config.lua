@@ -1,4 +1,4 @@
-{
+return {
     GAMES = {
         {
             name = "Grim Soul",
