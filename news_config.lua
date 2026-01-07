@@ -1,5 +1,5 @@
 {
-    --MAINTENANCE = true,
+    
     MAINTENANCE = false,
     TITLE = "🔥 DRABOY CLOUD NEWS 🔥",
     MESSAGE = [[
