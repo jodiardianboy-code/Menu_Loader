@@ -3,7 +3,7 @@
         {
             name = " ╰▶ 🎃 Grim Soul: Dark Fantasy",
             version = "7.9.0",
-            link = ""
+            link = "https://raw.githubusercontent.com/jodiardianboy-code/Menu_Loader/refs/heads/main/grimsoul.lua"
         },
         {
             name = " ╰▶ 🧟 Last Day on Earth: Survival",
@@ -18,6 +18,7 @@
         
     }
 }
+
 
 
 
