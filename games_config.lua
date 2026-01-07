@@ -10,12 +10,9 @@
             version = "1.43.0",
             link = ""
         },
-         {
-            name = " ╰▶ 🚇 Metro 2050 Survival",
-            version = "1.43.0",
-            link = "0.0.365"
-        }
+        
     }
 }
+
 
 
