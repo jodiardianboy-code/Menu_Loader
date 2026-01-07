@@ -1,4 +1,4 @@
-return {
+{
     GAMES = {
         {
             name = "Grim Soul",
@@ -23,3 +23,4 @@ return {
 Follow @DraboyGaming
 ]]
 }
+
