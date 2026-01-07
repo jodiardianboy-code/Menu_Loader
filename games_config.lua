@@ -1,15 +1,21 @@
 {
     GAMES = {
         {
-            name = "Grim Soul",
+            name = " ╰▶ 🎃 Grim Soul: Dark Fantasy",
             version = "7.9.0",
-            link = "https://pastebin.com/raw/42Z1fhCb"
+            link = ""
         },
         {
-            name = "Last Day On Earth",
+            name = " ╰▶ 🧟 Last Day on Earth: Survival",
             version = "1.43.0",
-            link = "https://pastebin.com/raw/REppJphf"
+            link = ""
+        },
+         {
+            name = " ╰▶ 🚇 Metro 2050 Survival",
+            version = "1.43.0",
+            link = "0.0.365"
         }
     }
 }
+
 
