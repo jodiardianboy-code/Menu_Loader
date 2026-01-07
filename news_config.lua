@@ -1,13 +1,12 @@
 {
     
    
-    TITLE = "🔥 DRABOY CLOUD NEWS 🔥",
+    TITLE = "🔥 DRABOY NEWS 🔥",
     MESSAGE = [[
 Welcome to Draboy Cloud Loader
 
-• Grim Soul updated
-• LDOE mod coming
-• Metro 2050 in development
+• old server is suck !
+• i try new one still laggy, but u can try it
 
 Follow @DraboyGaming
     ]],
