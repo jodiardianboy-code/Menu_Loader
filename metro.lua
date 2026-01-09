@@ -4,7 +4,7 @@ local ItemExplorer = {}
 
 ItemExplorer.item_data = {
 
-      ["New Items"] = {
+      ["🔥New Items"] = {
         ["Artifacts RecognitionOfTheLady"] = "1186",
         ["Artifacts RubiksCube"] = "1163",
         ["Clothes ChristmasBackpack"] = "1164",
