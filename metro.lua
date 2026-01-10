@@ -2027,7 +2027,8 @@ STATE = {
     NO_ARMOR_DURABILITY = false,
     FREE_CRAFT = false,
     FREE_BUILD = false,
-    FREE_UPGRADE = false  -- TAMBAH INI
+    FREE_UPGRADE = false,  -- TAMBAH INI
+      EXP_HACK = false,  -- GANTI NAMA JADI EXP_HACK
 }
 
 CACHE = {
@@ -2038,7 +2039,8 @@ CACHE = {
     ARMOR_DURA = {},
     FREE_CRAFT = {},
     FREE_BUILD = {},
-    FREE_UPGRADE = {}  -- TAMBAH INI
+    FREE_UPGRADE = {},  -- TAMBAH INI
+      EXP_HACK = {},  -- GANTI NAMA
 }
 
 ----------------------------------------------------
@@ -2113,7 +2115,20 @@ METHOD = {
         CLASS = "BuildingModel",
         NAME  = "IsCanBuildingOnPlace",  -- Untuk validasi placement (mungkin untuk upgrade)
         ADDR  = {}
-    }
+    },
+         -- EXPERIENCE HACK METHODS
+    GET_PLAYER_EXP = {
+        CLASS = "GameManager", 
+        NAME  = "get_Experience",
+        ADDR  = {}
+    },
+
+
+
+
+
+
+      
 
 }
 
@@ -3259,6 +3274,61 @@ function toggle_both_build_upgrade()
 end
 
 ----------------------------------------------------
+-- TOGGLE XP HACK (SIMPLE VERSION)
+----------------------------------------------------
+function toggle_xp_hack()
+    if STATE.EXP_HACK then
+        -- RESTORE
+        if CACHE.EXP_HACK and #CACHE.EXP_HACK > 0 then
+            sv(CACHE.EXP_HACK)
+            CACHE.EXP_HACK = {}
+            STATE.EXP_HACK = false
+            gg.toast("🔴 XP HACK OFF")
+        end
+        return
+    end
+    
+    -- FIND METHOD
+    if #METHOD.GET_PLAYER_EXP.ADDR == 0 then
+        gg.toast("🔍 Finding XP method...")
+        METHOD.GET_PLAYER_EXP.ADDR = findMethod(
+            METHOD.GET_PLAYER_EXP.CLASS,
+            METHOD.GET_PLAYER_EXP.NAME
+        )
+        
+        if #METHOD.GET_PLAYER_EXP.ADDR == 0 then
+            gg.alert("❌ XP method not found")
+            return
+        end
+    end
+    
+    -- PATCH METHOD untuk selalu return 1000
+    CACHE.EXP_HACK = {}
+    local patch = {}
+    
+    for _, addr in ipairs(METHOD.GET_PLAYER_EXP.ADDR) do
+        -- Cache original (4 instruksi pertama)
+        for i = 0, 12, 4 do
+            table.insert(CACHE.EXP_HACK, {
+                address = addr + i,
+                flags = gg.TYPE_DWORD,
+                value = gv(addr + i, gg.TYPE_DWORD)
+            })
+        end
+        
+        -- Patch: return 1000.0f (untuk floating point XP)
+        -- Menggunakan instruksi ARM64 untuk load constant float 1000
+        table.insert(patch, { address = addr,     flags = gg.TYPE_DWORD, value = "h4000001C" }) -- ldr s0, #8
+        table.insert(patch, { address = addr + 4, flags = gg.TYPE_DWORD, value = "hC0035FD6" }) -- ret
+        table.insert(patch, { address = addr + 8, flags = gg.TYPE_DWORD, value = "h00447A44" }) -- 1000.0f
+        table.insert(patch, { address = addr +12, flags = gg.TYPE_DWORD, value = "h00000000" }) -- padding
+    end
+    
+    sv(patch)
+    STATE.EXP_HACK = true
+    gg.toast("🟢 max xp on")
+end
+----------------------------------------------------
 -- FUNGSI PEMBANTU (DATE & COUNTER)
 ----------------------------------------------------
 local function get_date()
@@ -3292,8 +3362,14 @@ function welcome_screen()
     )
 end
 
+
+
+
+
+
 ----------------------------------------------------
--- SUBMENU MOD
+-- MAIN MENU
+-------------------------- SUBMENU MOD
 ----------------------------------------------------
 function submenu_mod()
     local function status(state)
@@ -3309,14 +3385,15 @@ function submenu_mod()
         "🏗️ Free Build Base" .. status(STATE.FREE_BUILD),
         "⬆️ Free Upgrade Base" .. status(STATE.FREE_UPGRADE),
         "🖼️ Get Gift On Collection mode" .. status(STATE.COLLECTION_ALL),
+        "🌟 Max level" .. status(STATE.EXP_HACK),  -- TAMBAH INI
         "⬅️ Back"
     }, nil, "🛠️ MOD FEATURES LIST\n" .. count_active_mods() .. " Active | " .. get_date())
 
-    if m == nil or m == 9 then 
-        return -- Kembali ke pemanggil (show_menu)
+    if m == nil or m == 10 then  -- Ubah dari 9 menjadi 10 karena ada tambahan
+        return
     end
 
-    -- Eksekusi fungsi toggle (Pastikan fungsi ini ada di script utama)
+    -- Eksekusi fungsi toggle
     if m == 1 then toggle_no_damage()
     elseif m == 2 then toggle_no_weapon_durability()
     elseif m == 3 then toggle_no_armor_durability()
@@ -3324,17 +3401,15 @@ function submenu_mod()
     elseif m == 5 then toggle_free_craft()
     elseif m == 6 then toggle_free_build()
     elseif m == 7 then toggle_free_upgrade()
-    elseif m == 8 then toggle_all_collection() end
+    elseif m == 8 then toggle_all_collection()
+    elseif m == 9 then toggle_xp_hack() end  -- TAMBAH INI
     
-    return submenu_mod() -- Refresh submenu
+    return submenu_mod()
 end
+      
+----------------------------
 
 
-
-
-----------------------------------------------------
--- MAIN MENU
-----------------------------------------------------
 function show_menu()
     local activeCount = count_active_mods()
     -- Pastikan ItemExplorer.get_menu_status() tidak mengembalikan nil
@@ -3347,7 +3422,7 @@ function show_menu()
         "💰  EDIT ALL COIN",         -- 4
         "⛽  GASOLINE HACK",         -- 5
         "🧹  RESET SEARCH",          -- 6
-        "🚀 MENU MOD [" .. activeCount .. "/8 ACTIVE]", -- 7
+        "🚀 MENU MOD [" .. activeCount .. "/9 ACTIVE]", -- 7
         "ℹ️ INFO SCRIPT",            -- 8
         "❌ EXIT"                    -- 9
     }, nil, 
