@@ -4,12 +4,16 @@
     TITLE = "🔥 DRABOY NEWS 🔥",
     MESSAGE = [[
 Welcome to Draboy Cloud Loader
+    
+📢  CHANGELOG / UPDATE:
+    
+   🚇 Metro 2050 Survival
+        • 🔥 Fix something
+        • 🔥 Add New Mod Unlimited Gold
+    
 
-• old server is suck !
-• i try new one still laggy, but u can try it
-🔥 Add new game Dead God land
 
 Follow @DraboyGaming
     ]],
-    LAST_UPDATE = "2026-01-07"
+    LAST_UPDATE = "12-01-2026"
 }
