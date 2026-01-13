@@ -4,214 +4,92 @@ local ItemExplorer = {}
 
 ItemExplorer.item_data = {
 
-    ["🔥New Items"] = {
-        ["Furniture GatewayToDarkHill"] = "1159",
-        ["Furniture GhostLocomotive"] = "1158",
-        ["Furniture HalloweenBox"] = "1123",
-        ["Heal BergherzExtraktRockCocktail"] = "1212",
-        ["Heal CalonRewLlaVennHeartOfIce"] = "1206",
-        ["Heal DreiHammerThreeHammers"] = "1210",
-        ["Heal EisenlotRegBlockIronSolder"] = "1211",
-        ["Heal GrimmblutBrauGrimmsSoup"] = "1208",
-        ["Heal KlinBoltSalbeBoltOintment"] = "1209",
-        ["Heal LligwennSawrhaWhiteSigh"] = "1203",
-        ["Heal NiwlEiddMistAmpoule"] = "1204",
-        ["Heal RitwethIrddainElvenAdrenaline"] = "1205",
-        ["Heal TrylliantTriLinellElvenSpark"] = "1207",
-        ["HomeFurniture GingerbreadMan"] = "1200",
-        ["HomeFurniture GuardianOfTheWay"] = "1142",
-        ["HomeFurniture ScarySnowman"] = "1202",
-        ["HomeFurniture StrangeFireplace"] = "1217",
-        ["HomeFurniture TheStayPuftMarshmallowMan"] = "1201",       
-        ["Resources GiftInA BlueBox"] = "1125",
-        ["Resources GiftInA RedBox"] = "1124",
-        ["Resources HalloweenGift"] = "1126",
-        ["Resources KatanaDrawing"] = "1222",
-        ["Resources PrintedCircuitBoardKit"] = "1160",
-        ["Resources TachisDrawing"] = "1223",
-        ["Resources Wheat"] = "1129",
-        ["Resources WheatFlour"] = "1130",
-        ["Resources WheatSeeds"] = "1128",
-        ["Trash FamilyMedallion"] = "1162",
-        ["Trash FrostOfDistantLands"] = "1185",
-        ["Trash GrayFabric"] = "1199",
-        ["Trash Key2"] = "1161",
-        ["Trash UniversalBoard"] = "1198",
-        ["VehiclesCompleted ATV Completed"] = "647",
-        ["Weapons AK70Rozhdestvensky"] = "1178",
-        ["Weapons BloodyCleaver"] = "1127",
-        ["Weapons ChristmasAxe"] = "1179",
-        ["Weapons ChristmasCrutch"] = "1182",
-        ["Weapons ChristmasKatana"] = "1180",
-        ["Weapons ChristmasKnife"] = "1181",
-        ["Weapons ChristmasMace"] = "1183",
-        ["Weapons ChristmasSword"] = "1184",
-        ["Weapons ColdWanderersCrossbow"] = "1219",
-        ["Weapons DeepApprenticesHammer"] = "1218",
-        ["Weapons FestiveWhispers"] = "1214",
-        ["Weapons FrostyNightCarbine"] = "1213",
-        ["Weapons IceMachineGun"] = "1216",
-        ["Weapons Katana"] = "1220",
-        ["Weapons StormSolstice"] = "1215",
-        ["Weapons Tachi"] = "1221",
+
+    ["🧭 Quest item"] = {
+            ["item quest Family Medallion"] = "1162",
+            ["item quest Frost Of Distant Lands"] = "1185",
+            ["item quest GrayFabric"] = "1199",
+            ["Item Quest UniversalBoard"] = "1198",
+            ["item quest Key with a fob"] = "1161",
+        
     },
 
-    ["🏗️ Building"] = {
-        ["Arch"] = {
-            ["Building Arch"] = "633",
-            ["Building Arch_Level2_"] = "634",
-            ["Building Arch_Level3_"] = "635",
-            ["Building Arch_Level4_"] = "636",
-            ["Building Arch_level5_"] = "696",
-        },
-        ["Door"] = {
-            ["Building Door"] = "103",
-            ["Building Door_level2_"] = "107",
-            ["Building Door_level3_"] = "111",
-            ["Building Door_level4_"] = "115",
-            ["Building Door_level5_"] = "695",
-        },
-        ["Floor"] = {
-            ["Building Floor"] = "100",
-            ["Building Floor_level2_"] = "104",
-            ["Building Floor_level3_"] = "108",
-            ["Building Floor_level4_"] = "112",
-            ["Building Floor_level5_"] = "692",
-        },
-        ["Ladder"] = {
-            ["Building Ladder"] = "99",
-            ["Building Ladder_level2_"] = "799",
-            ["Building Ladder_level3_"] = "800",
-            ["Building Ladder_level4_"] = "801",
-            ["Building Ladder_level5_"] = "802",
-        },
-        ["Wall"] = {
-            ["Building Wall"] = "101",
-            ["Building Wall_level2_"] = "105",
-            ["Building Wall_level3_"] = "109",
-            ["Building Wall_level4_"] = "113",
-            ["Building Wall_level5_"] = "693",
-        },
-        ["Window"] = {
-            ["Building Window"] = "102",
-            ["Building Window_level2_"] = "106",
-            ["Building Window_level3_"] = "110",
-            ["Building Window_level4_"] = "114",
-            ["Building Window_level5_"] = "694",
-        },
+    ["⚠️ Not ready in game"] = {
+        ["? Wheat"] = "1129",
+        ["? Wheat Flour"] = "1130",
+        ["? Wheat Seeds"] = "1128",
+        ["? Halloween Gift"] = "1126",
+        
+    },
+
+    ["🎁 Gacha item"] = {
+        ["Gift BlueBox"] = "1125",
+        ["Gift RedBox"] = "1124",
+        
     },
     
-      ["🏺 Artifact"] = {
-        ["Artifacts RecognitionOfTheLady"] = "1186",
-        ["Artifacts RubiksCube"] = "1163",
-        ["Artifacts AncientFang"] = "1001",
-        ["Artifacts AntediluvianCassette"] = "1028",
-        ["Artifacts AntiqueAlarmClock"] = "1004",
-        ["Artifacts AntiqueMedallion"] = "1015",
-        ["Artifacts BinocularsWithoutLenses"] = "1005",
-        ["Artifacts BrokenComb"] = "1043",
-        ["Artifacts BrokenNeurophone"] = "1027",
-        ["Artifacts BrokenSmartWatch"] = "1025",
-        ["Artifacts CaveCrystal"] = "1046",
-        ["Artifacts ChildrensFlashlight"] = "1003",
-        ["Artifacts Collar"] = "1038",
-        ["Artifacts DemagnetizedMagnet"] = "1011",
-        ["Artifacts DirtyAshtray"] = "1041",
-        ["Artifacts DriedSoap"] = "1044",
-        ["Artifacts EmptyHourglass"] = "1013",
-        ["Artifacts EmptyInhaler"] = "1030",
-        ["Artifacts LadysMirror"] = "1032",
-        ["Artifacts MagnifyingGlass"] = "1012",
-        ["Artifacts MirrorFragment"] = "1049",
-        ["Artifacts OldCreditCards"] = "1026",
-        ["Artifacts OldPen"] = "1002",
-        ["Artifacts OldScissors"] = "1008",
-        ["Artifacts OldScrewdriver"] = "1009",
-        ["Artifacts OldSilverCup"] = "1022",
-        ["Artifacts PackOfDampCigars"] = "1037",
-        ["Artifacts PotteryShards"] = "1045",
-        ["Artifacts QuartzShard"] = "1035",
-        ["Artifacts RustyAdjustableWrench"] = "1036",
-        ["Artifacts RustyBearing"] = "1023",
-        ["Artifacts RustyBolt"] = "1056",
-        ["Artifacts RustyFile"] = "1085",
-        ["Artifacts RustyGear"] = "1058",
-        ["Artifacts RustyHammer"] = "1084",
-        ["Artifacts RustyKey"] = "1029",
-        ["Artifacts RustyNail"] = "1057",
-        ["Artifacts SacrificialCup"] = "1021",
-        ["Artifacts ShardOfGravity"] = "1048",
-        ["Artifacts SilverCigar"] = "1039",
-        ["Artifacts StaleLipstick"] = "1033",
-        ["Artifacts StrangeBeads"] = "1014",
-        ["Artifacts StrangeCompass"] = "1006",
-        ["Artifacts StrangeGoldJewelry"] = "1019",
-        ["Artifacts StrangeMoney"] = "1031",
-        ["Artifacts StrangePliers"] = "1047",
-        ["Artifacts StrangePoliceBadge"] = "1007",
-        ["Artifacts StrangeSilverJewelry"] = "1020",
-        ["Artifacts StrangeSilverTableKnife"] = "1017",
-        ["Artifacts StrangeTableKnife"] = "1016",
-        ["Artifacts StrangeTablespoon"] = "1018",
-        ["Artifacts TeddyBear"] = "1034",
-        ["Artifacts UsedBatteries"] = "1024",
-        ["Artifacts VeterinaryScalpel"] = "1042",
-        ["Artifacts VeterinaryTweezers"] = "1040",
-        ["Artifacts VintagePocketWatch"] = "1010",
-    },
    
-    ["🏗️ Building"] = {
-            ["Arch"] = {
-                ["Building Arch"] = "633",
-                ["Building Arch_Level2_"] = "634",
-                ["Building Arch_Level3_"] = "635",
-                ["Building Arch_Level4_"] = "636",
-                ["Building Arch_level5_"] = "696",
+    ["👕 Equipment"] = { 
+        
+            ["🏺 Artifact"] = {
+                ["Artifacts RecognitionOfTheLady"] = "1186",
+                ["Artifacts RubiksCube"] = "1163",
+                ["Artifacts AncientFang"] = "1001",
+                ["Artifacts AntediluvianCassette"] = "1028",
+                ["Artifacts AntiqueAlarmClock"] = "1004",
+                ["Artifacts AntiqueMedallion"] = "1015",
+                ["Artifacts BinocularsWithoutLenses"] = "1005",
+                ["Artifacts BrokenComb"] = "1043",
+                ["Artifacts BrokenNeurophone"] = "1027",
+                ["Artifacts BrokenSmartWatch"] = "1025",
+                ["Artifacts CaveCrystal"] = "1046",
+                ["Artifacts ChildrensFlashlight"] = "1003",
+                ["Artifacts Collar"] = "1038",
+                ["Artifacts DemagnetizedMagnet"] = "1011",
+                ["Artifacts DirtyAshtray"] = "1041",
+                ["Artifacts DriedSoap"] = "1044",
+                ["Artifacts EmptyHourglass"] = "1013",
+                ["Artifacts EmptyInhaler"] = "1030",
+                ["Artifacts LadysMirror"] = "1032",
+                ["Artifacts MagnifyingGlass"] = "1012",
+                ["Artifacts MirrorFragment"] = "1049",
+                ["Artifacts OldCreditCards"] = "1026",
+                ["Artifacts OldPen"] = "1002",
+                ["Artifacts OldScissors"] = "1008",
+                ["Artifacts OldScrewdriver"] = "1009",
+                ["Artifacts OldSilverCup"] = "1022",
+                ["Artifacts PackOfDampCigars"] = "1037",
+                ["Artifacts PotteryShards"] = "1045",
+                ["Artifacts QuartzShard"] = "1035",
+                ["Artifacts RustyAdjustableWrench"] = "1036",
+                ["Artifacts RustyBearing"] = "1023",
+                ["Artifacts RustyBolt"] = "1056",
+                ["Artifacts RustyFile"] = "1085",
+                ["Artifacts RustyGear"] = "1058",
+                ["Artifacts RustyHammer"] = "1084",
+                ["Artifacts RustyKey"] = "1029",
+                ["Artifacts RustyNail"] = "1057",
+                ["Artifacts SacrificialCup"] = "1021",
+                ["Artifacts ShardOfGravity"] = "1048",
+                ["Artifacts SilverCigar"] = "1039",
+                ["Artifacts StaleLipstick"] = "1033",
+                ["Artifacts StrangeBeads"] = "1014",
+                ["Artifacts StrangeCompass"] = "1006",
+                ["Artifacts StrangeGoldJewelry"] = "1019",
+                ["Artifacts StrangeMoney"] = "1031",
+                ["Artifacts StrangePliers"] = "1047",
+                ["Artifacts StrangePoliceBadge"] = "1007",
+                ["Artifacts StrangeSilverJewelry"] = "1020",
+                ["Artifacts StrangeSilverTableKnife"] = "1017",
+                ["Artifacts StrangeTableKnife"] = "1016",
+                ["Artifacts StrangeTablespoon"] = "1018",
+                ["Artifacts TeddyBear"] = "1034",
+                ["Artifacts UsedBatteries"] = "1024",
+                ["Artifacts VeterinaryScalpel"] = "1042",
+                ["Artifacts VeterinaryTweezers"] = "1040",
+                ["Artifacts VintagePocketWatch"] = "1010",
             },
 
-            ["Door"] = {
-                ["Building Door"] = "103",
-                ["Building Door_level2_"] = "107",
-                ["Building Door_level3_"] = "111",
-                ["Building Door_level4_"] = "115",
-                ["Building Door_level5_"] = "695",
-            },
-
-            ["Floor"] = {
-                ["Building Floor"] = "100",
-                ["Building Floor_level2_"] = "104",
-                ["Building Floor_level3_"] = "108",
-                ["Building Floor_level4_"] = "112",
-                ["Building Floor_level5_"] = "692",
-
-            },
-            ["Ladder"] = {
-                ["Building Ladder"] = "99",
-                ["Building Ladder_level2_"] = "799",
-                ["Building Ladder_level3_"] = "800",
-                ["Building Ladder_level4_"] = "801",
-                ["Building Ladder_level5_"] = "802",
-
-            },
-            ["Wall"] = {
-                ["Building Wall"] = "101",
-                ["Building Wall_level2_"] = "105",
-                ["Building Wall_level3_"] = "109",
-                ["Building Wall_level4_"] = "113",
-                ["Building Wall_level5_"] = "693",
-
-            },
-            ["Window"] = {
-                ["Building Window"] = "102",
-                ["Building Window_level2_"] = "106",
-                ["Building Window_level3_"] = "110",
-                ["Building Window_level4_"] = "114",
-                ["Building Window_level5_"] = "694",
-            },
-          
-    },
-    
-     ["👕 Cloth"] = {    
             ["Backpack"] = {
                 ["Clothes MilitaryBackpack"] = "171",
                 ["Clothes TacticalBackpack"] = "172",
@@ -241,6 +119,7 @@ ItemExplorer.item_data = {
                 ["Clothes AntiradiationProtectivePants"] = "755",
 
             },
+
             ["P40"] = {
                 ["Clothes P40ArmorCorps"] = "556",
                 ["Clothes P40Boots"] = "558",
@@ -248,6 +127,7 @@ ItemExplorer.item_data = {
                 ["Clothes P40PowerExoskeleton"] = "557",
 
             },
+
             ["Assault"] = {
                 ["Clothes AssaultArmor"] = "229",
                 ["Clothes AssaultBoots"] = "228",
@@ -255,6 +135,7 @@ ItemExplorer.item_data = {
                 ["Clothes AssaultPants"] = "230",
 
             },
+
             ["Communard"] = {
                 ["Clothes CommunardScoutBoots"] = "992",
                 ["Clothes CommunardScoutJacket"] = "990",
@@ -264,6 +145,7 @@ ItemExplorer.item_data = {
                 ["Clothes CommunardStormtrooperPants"] = "995",
 
             },
+
             ["Experimental"] = {
                 ["Clothes ExperimentalBodyArmor"] = "237",
                 ["Clothes ExperimentalBoots"] = "236",
@@ -278,6 +160,7 @@ ItemExplorer.item_data = {
                 ["Clothes GingerbreadMansPants"] = "776",
 
             },
+
             ["Jack O Lanterns"] = {
                 ["Clothes JackolanternsBoots"] = "722",
                 ["Clothes JackolanternsHelmet"] = "719",
@@ -285,6 +168,7 @@ ItemExplorer.item_data = {
                 ["Clothes JackolanternsPants"] = "721",
 
             },
+
             ["Jack The Ripper"] = {
                 ["Clothes JacktheRippersBoots"] = "710",
                 ["Clothes JacktheRippersHat"] = "707",
@@ -293,6 +177,7 @@ ItemExplorer.item_data = {
                 
 
             },
+
             ["Jasons"] = {
                 ["Clothes JasonsBloodstainedJacket"] = "712",
                 ["Clothes JasonsBloodstainedPants"] = "713",
@@ -301,7 +186,7 @@ ItemExplorer.item_data = {
 
             },
 
-             ["Military"] = {
+            ["Military"] = {
                 ["Clothes MilitaryBodyArmor"] = "224",
                 ["Clothes MilitaryBoots"] = "226",
                 ["Clothes MilitaryGasMaskOM90"] = "997",
@@ -309,7 +194,8 @@ ItemExplorer.item_data = {
                 ["Clothes MilitaryPants"] = "225",
 
             },
-             ["Special Force"] = {
+
+            ["Special Force"] = {
                 ["Clothes SpecialForcesBodyArmor"] = "232",
                 ["Clothes SpecialForcesBoots"] = "234",
                 ["Clothes SpecialForcesHelmet"] = "231",
@@ -317,7 +203,7 @@ ItemExplorer.item_data = {
 
             },
 
-            ["Mix Clothes"] = {
+            ["Mix Equipment"] = {
                
                 ["Clothes ElegantTravelTrousers"] = "1148",
                 ["Clothes ElvenBoots"] = "1169",
@@ -426,81 +312,212 @@ ItemExplorer.item_data = {
         
         
     },
-    ["🍽️ Food"] = {
-            ["Eat"] = {
-                ["Food Bananas"] = "0",
-                ["Food CannedFish"] = "10",
-                ["Food CannedMeat"] = "38",
-                ["Food CheeseFlatbreads"] = "1095",
-                ["Food Chocolate"] = "35",
-                ["Food Cocoa"] = "39",
-                ["Food CookedFish"] = "20",
-                ["Food CookedMeat"] = "273",
-                ["Food CookedSweetPotato"] = "12",
-                ["Food CornPorridge"] = "784",
-                ["Food Cornbread"] = "17",
-                ["Food Cucumbers"] = "1066",
-                ["Food Eggs"] = "15",
-                ["Food Fish"] = "19",
-                ["Food FishSoup"] = "785",
-                ["Food FishSteak"] = "272",
-                ["Food FriedCheeseWithBread"] = "1097",
-                ["Food FriedCorn"] = "1081",
-                ["Food FriedMushrooms"] = "1079",
-                ["Food FriesforBorshch"] = "787",
-                ["Food Grilledcorn"] = "319",
-                ["Food Hominy"] = "783",
-                ["Food JamSandwich"] = "1069",
-                ["Food Jerky"] = "5",
-                ["Food MeatSteak"] = "6",
-                ["Food MushroomAndCheeseCasserole"] = "1096",
-                ["Food MushroomSoup"] = "1080",
-                ["Food Omelet"] = "16",
-                ["Food Oranges"] = "1",
-                ["Food PeachJam"] = "33",
-                ["Food Pineapple"] = "2",
-                ["Food PineappleJuice"] = "21",
-                ["Food Pistachios"] = "32",
-                ["Food PizzaWithRatMeat"] = "1094",
-                ["Food PotRoast"] = "786",
-                ["Food ProcessedCheeseInA Jar"] = "1092",
-                ["Food RatLasagna"] = "1098",
-                ["Food RatMeat"] = "881",
-                ["Food RatMeatSoupWithCheese"] = "1099",
-                ["Food RatQuesadilla"] = "1093",
-                ["Food RawMeat"] = "4",
-                ["Food Salad"] = "1068",
-                ["Food Sandwich"] = "18",
-                ["Food SpecialRation"] = "30",
-                ["Food Spice"] = "37",
-                ["Food SpicySauce"] = "34",
-                ["Food Stockfish"] = "322",
-                ["Food SweetPotato"] = "11",
-                ["Food Tomatoes"] = "1067",
-                ["Food Treat"] = "736",
-                ["Food Trick"] = "737",
-                ["Food UkrainianBorshch"] = "788",
-                ["Food Yellowediblemushroom"] = "848",
+
+    ["🍽️ Consumable"] = {
+
+            ["🫕 Food"] = {
+                ["Bananas"] = "0",
+                ["CannedFish"] = "10",
+                ["CannedMeat"] = "38",
+                ["CheeseFlatbreads"] = "1095",
+                ["Chocolate"] = "35",
+                ["Cocoa"] = "39",
+                ["CookedFish"] = "20",
+                ["CookedMeat"] = "273",
+                ["CookedSweetPotato"] = "12",
+                ["CornPorridge"] = "784",
+                ["Cornbread"] = "17",
+                ["Cucumbers"] = "1066",
+                ["Eggs"] = "15",
+                ["Fish"] = "19",
+                ["FishSoup"] = "785",
+                ["FishSteak"] = "272",
+                ["FriedCheeseWithBread"] = "1097",
+                ["FriedCorn"] = "1081",
+                ["FriedMushrooms"] = "1079",
+                ["FriesforBorshch"] = "787",
+                ["Grilledcorn"] = "319",
+                ["Hominy"] = "783",
+                ["JamSandwich"] = "1069",
+                ["Jerky"] = "5",
+                ["MeatSteak"] = "6",
+                ["MushroomAndCheeseCasserole"] = "1096",
+                ["MushroomSoup"] = "1080",
+                ["Omelet"] = "16",
+                ["Oranges"] = "1",
+                ["PeachJam"] = "33",
+                ["Pineapple"] = "2",
+                ["PineappleJuice"] = "21",
+                ["Pistachios"] = "32",
+                ["PizzaWithRatMeat"] = "1094",
+                ["PotRoast"] = "786",
+                ["ProcessedCheeseInA Jar"] = "1092",
+                ["RatLasagna"] = "1098",
+                ["RatMeat"] = "881",
+                ["RatMeatSoupWithCheese"] = "1099",
+                ["RatQuesadilla"] = "1093",
+                ["RawMeat"] = "4",
+                ["Salad"] = "1068",
+                ["Sandwich"] = "18",
+                ["SpecialRation"] = "30",
+                ["Spice"] = "37",
+                ["SpicySauce"] = "34",
+                ["Stockfish"] = "322",
+                ["SweetPotato"] = "11",
+                ["Tomatoes"] = "1067",
+                ["Treat"] = "736",
+                ["Trick"] = "737",
+                ["UkrainianBorshch"] = "788",
+                ["Yellowediblemushroom"] = "848",
                         
 
             },
 
-            ["Drink"] = {
-                ["Food WaterBottle"] = "7",
-                ["Food Coconut"] = "3",
-                ["Food Beer"] = "14",
-                ["Food CoconutMilk"] = "8",
-                ["Food CoffeeMug"] = "882",
-                ["Food OliveOil"] = "36",
-                ["Food OrangeJuice"] = "13",
-                ["Food RumBottle"] = "31",
-                ["Food SodaBottle"] = "9",
+            ["🥃 Drink"] = {
+                ["WaterBottle"] = "7",
+                ["Coconut"] = "3",
+                ["Beer"] = "14",
+                ["CoconutMilk"] = "8",
+                ["CoffeeMug"] = "882",
+                ["OliveOil"] = "36",
+                ["OrangeJuice"] = "13",
+                ["RumBottle"] = "31",
+                ["SodaBottle"] = "9",
 
+            },
+
+            ["💊 Potion Drugs"] = {
+                ["BergherzExtraktRockCocktail"] = "1212",
+                ["CalonRewLlaVennHeartOfIce"] = "1206",
+                ["DreiHammerThreeHammers"] = "1210",
+                ["EisenlotRegBlockIronSolder"] = "1211",
+                ["GrimmblutBrauGrimmsSoup"] = "1208",
+                ["KlinBoltSalbeBoltOintment"] = "1209",
+                ["LligwennSawrhaWhiteSigh"] = "1203",
+                ["NiwlEiddMistAmpoule"] = "1204",
+                ["RitwethIrddainElvenAdrenaline"] = "1205",
+                ["TrylliantTriLinellElvenSpark"] = "1207",
+                ["Acidinaglassjar"] = "411",
+                ["Antcocktail"] = "402",
+                ["Antibiotics40"] = "428",
+                ["Bandages"] = "23",
+                ["Batcocktail"] = "404",
+                ["BiogelObservers"] = "701",
+                ["Biostimulator"] = "24",
+                ["Bloodbag"] = "396",
+                ["Boiledwater"] = "406",
+                ["BuffJet"] = "429",
+                ["Buffout"] = "431",
+                ["Bufftats"] = "430",
+                ["Crocodilecocktail"] = "398",
+                ["DisinfectantBandages"] = "442",
+                ["DriedRedgrassflowers"] = "408",
+                ["Driedants"] = "401",
+                ["Driedbat"] = "403",
+                ["Driedluminiscentshrooms"] = "410",
+                ["Driedpoisonousmoss"] = "409",
+                ["Driedthistle"] = "407",
+                ["EnduranceCocktail"] = "434",
+                ["EnergyDrink"] = "486",
+                ["EnergySuperDrink"] = "487",
+                ["FirstAidKit"] = "22",
+                ["HardEnduranceCocktail"] = "435",
+                ["HardSpeedCocktail"] = "433",
+                ["HerbalAntibiotic30"] = "427",
+                ["HerbalBuffout"] = "420",
+                ["HerbalPainkiller20"] = "426",
+                ["HerbalStimulant"] = "419",
+                ["Hippofat"] = "399",
+                ["Hyperstimulator"] = "26",
+                ["Immunostimulant"] = "25",
+                ["InstituteEnergyDrink"] = "489",
+                ["Jet"] = "423",
+                ["LuminiscentBloodBag"] = "425",
+                ["MedicinefromtheInstitute"] = "424",
+                ["MixZ1515"] = "436",
+                ["Neurostimulator"] = "27",
+                ["PainkillerSyringe"] = "29",
+                ["Psycho"] = "437",
+                ["Psychotats"] = "438",
+                ["Reanimator"] = "28",
+                ["Sanitizer"] = "412",
+                ["SnakeCocktail"] = "418",
+                ["Snakeskin"] = "400",
+                ["SpeedCocktail"] = "432",
+                ["Stimulant"] = "439",
+                ["SuperStimulant"] = "440",
+                ["SuperiorBiogelObservers"] = "702",
+                ["TND"] = "490",
+                ["WormwoodAtisepticBandaid"] = "456",
+                ["WormwoodSanitizer"] = "455",
+                ["YamsEnergySuperDrink"] = "488",
+                ["Yamscocktail"] = "397",
+                ["Ycell"] = "422",
             },
        
     },
     
-     ["💺 Furniture"] = {
+    ["🏗️ Building"] = {
+            ["Arch"] = {
+                ["Building Arch"] = "633",
+                ["Building Arch_Level2_"] = "634",
+                ["Building Arch_Level3_"] = "635",
+                ["Building Arch_Level4_"] = "636",
+                ["Building Arch_level5_"] = "696",
+            },
+
+            ["Door"] = {
+                ["Building Door"] = "103",
+                ["Building Door_level2_"] = "107",
+                ["Building Door_level3_"] = "111",
+                ["Building Door_level4_"] = "115",
+                ["Building Door_level5_"] = "695",
+            },
+
+            ["Floor"] = {
+                ["Building Floor"] = "100",
+                ["Building Floor_level2_"] = "104",
+                ["Building Floor_level3_"] = "108",
+                ["Building Floor_level4_"] = "112",
+                ["Building Floor_level5_"] = "692",
+
+            },
+            ["Ladder"] = {
+                ["Building Ladder"] = "99",
+                ["Building Ladder_level2_"] = "799",
+                ["Building Ladder_level3_"] = "800",
+                ["Building Ladder_level4_"] = "801",
+                ["Building Ladder_level5_"] = "802",
+
+            },
+            ["Wall"] = {
+                ["Building Wall"] = "101",
+                ["Building Wall_level2_"] = "105",
+                ["Building Wall_level3_"] = "109",
+                ["Building Wall_level4_"] = "113",
+                ["Building Wall_level5_"] = "693",
+
+            },
+            ["Window"] = {
+                ["Building Window"] = "102",
+                ["Building Window_level2_"] = "106",
+                ["Building Window_level3_"] = "110",
+                ["Building Window_level4_"] = "114",
+                ["Building Window_level5_"] = "694",
+            },
+          
+    },
+
+
+    ["💺 Furniture"] = {
+        ["HomeFurniture GingerbreadMan"] = "1200",
+        ["HomeFurniture GuardianOfTheWay"] = "1142",
+        ["HomeFurniture ScarySnowman"] = "1202",
+        ["HomeFurniture StrangeFireplace"] = "1217",
+        ["HomeFurniture TheStayPuftMarshmallowMan"] = "1201", 
+        ["Furniture Gate way To Dark Hill"] = "1159",
+        ["Furniture Ghost Locomotive"] = "1158",
+        ["Furniture entrance under the hill Box"] = "1123",
         ["Furniture AntiqueCabinet"] = "473",
         ["Furniture ArmorsDeskTier2"] = "278",
         ["Furniture ArmorsDeskTier3"] = "279",
@@ -600,7 +617,6 @@ ItemExplorer.item_data = {
         ["Furniture Woolrug"] = "639",
         ["Furniture WornoutCarpet"] = "475",
         ["Furniture ZombieTrap"] = "205",
-        ["FurnitureCompleted ATV"] = "646",
         ["FurnitureCompleted Bretonsofa"] = "606",
         ["FurnitureCompleted Chair"] = "600",
         ["FurnitureCompleted CornersofaBreton"] = "605",
@@ -616,69 +632,490 @@ ItemExplorer.item_data = {
         ["FurnitureCompleted RoundTable"] = "599",
         ["FurnitureCompleted Scottysofa"] = "602",
         ["FurnitureCompleted YellowFridge"] = "611",
-        ["VehiclesCompleted ATV Completed"] = "647",
+      
     },
 
-    ["💊 Heal"] = {
-        ["Heal Acidinaglassjar"] = "411",
-        ["Heal Antcocktail"] = "402",
-        ["Heal Antibiotics40"] = "428",
-        ["Heal Bandages"] = "23",
-        ["Heal Batcocktail"] = "404",
-        ["Heal BiogelObservers"] = "701",
-        ["Heal Biostimulator"] = "24",
-        ["Heal Bloodbag"] = "396",
-        ["Heal Boiledwater"] = "406",
-        ["Heal BuffJet"] = "429",
-        ["Heal Buffout"] = "431",
-        ["Heal Bufftats"] = "430",
-        ["Heal Crocodilecocktail"] = "398",
-        ["Heal DisinfectantBandages"] = "442",
-        ["Heal DriedRedgrassflowers"] = "408",
-        ["Heal Driedants"] = "401",
-        ["Heal Driedbat"] = "403",
-        ["Heal Driedluminiscentshrooms"] = "410",
-        ["Heal Driedpoisonousmoss"] = "409",
-        ["Heal Driedthistle"] = "407",
-        ["Heal EnduranceCocktail"] = "434",
-        ["Heal EnergyDrink"] = "486",
-        ["Heal EnergySuperDrink"] = "487",
-        ["Heal FirstAidKit"] = "22",
-        ["Heal HardEnduranceCocktail"] = "435",
-        ["Heal HardSpeedCocktail"] = "433",
-        ["Heal HerbalAntibiotic30"] = "427",
-        ["Heal HerbalBuffout"] = "420",
-        ["Heal HerbalPainkiller20"] = "426",
-        ["Heal HerbalStimulant"] = "419",
-        ["Heal Hippofat"] = "399",
-        ["Heal Hyperstimulator"] = "26",
-        ["Heal Immunostimulant"] = "25",
-        ["Heal InstituteEnergyDrink"] = "489",
-        ["Heal Jet"] = "423",
-        ["Heal LuminiscentBloodBag"] = "425",
-        ["Heal MedicinefromtheInstitute"] = "424",
-        ["Heal MixZ1515"] = "436",
-        ["Heal Neurostimulator"] = "27",
-        ["Heal PainkillerSyringe"] = "29",
-        ["Heal Psycho"] = "437",
-        ["Heal Psychotats"] = "438",
-        ["Heal Reanimator"] = "28",
-        ["Heal Sanitizer"] = "412",
-        ["Heal SnakeCocktail"] = "418",
-        ["Heal Snakeskin"] = "400",
-        ["Heal SpeedCocktail"] = "432",
-        ["Heal Stimulant"] = "439",
-        ["Heal SuperStimulant"] = "440",
-        ["Heal SuperiorBiogelObservers"] = "702",
-        ["Heal TND"] = "490",
-        ["Heal WormwoodAtisepticBandaid"] = "456",
-        ["Heal WormwoodSanitizer"] = "455",
-        ["Heal YamsEnergySuperDrink"] = "488",
-        ["Heal Yamscocktail"] = "397",
-        ["Heal Ycell"] = "422",
+    
+
+    ["📦 Resource"] = {
+        ["resource basic material"] = {
+            ["Aluminum"]               = "529",
+            ["AluminumIngot"]          = "502",
+            ["AluminumPlate"]          = "503",
+            ["Bamboo"]                 = "45",
+            ["Charcoal"]               = "66",
+            ["Clay"]                   = "1075",
+            ["ClaysandMortar"]         = "64",
+            ["Cloth"]                  = "55",
+            ["Coal"]                   = "492",
+            ["CopperBar"]              = "74",
+            ["CopperOre"]              = "53",
+            ["CopperPlate"]            = "75",
+            ["DenseFabric"]            = "56",
+            ["GlassShards"]            = "255",
+            ["Hardwood"]               = "49",
+            ["HardwoodPlank"]          = "67",
+            ["IronBar"]                = "71",
+            ["IronOre"]                = "52",
+            ["IronPlate"]              = "72",
+            ["Leather"]                = "61",
+            ["Limestone"]              = "812",
+            ["Nails"]                  = "73",
+            ["PlasticWreckage"]        = "256",
+            ["Plexiglass"]             = "493",
+            ["Quicklime"]              = "813",
+            ["Rope"]                   = "57",
+            ["RubberParts"]            = "80",
+            ["Sand"]                   = "1076",
+            ["Sandstone"]              = "51",
+            ["SandstoneBrick"]         = "69",
+            ["ScrapMetal"]             = "70",
+            ["SteelBar"]               = "76",
+            ["SteelPlate"]             = "77",
+            ["Sulfur"]                 = "47",
+            ["SulfurOre"]              = "46",
+            ["TitanBar"]               = "78",
+            ["TitanOre"]               = "54",
+            ["TitanPlate"]             = "79",
+            ["ValuableWood"]           = "50",
+            ["ValuableWoodPlank"]      = "68",
+            ["Wood"]                   = "48",
+            ["WoodFiber"]              = "1086",
+            ["WoodPlank"]              = "65",
+        },
+
+ 
+        ["resource electronics & parts"] = {
+            ["ATV ElectricPowerSteering"]           = "760",
+            ["ATV Engine"]                         = "95",
+            ["ATV GasTank"]                        = "258",
+            ["ATV Parts"]                          = "759",
+            ["ATV Wheel"]                          = "88",
+            ["Batteries"]                          = "532",
+            ["Bearing"]                            = "91",
+            ["Bolts"]                              = "85",
+            ["DuctTape"]                           = "87",
+            ["ElectronicParts"]                    = "81",
+            ["EnginePart"]                         = "97",
+            ["Flashlight"]                         = "96",
+            ["Microcircuit"]                       = "89",
+            ["PC Bset"]                            = "1050",
+            ["RareChip"]                           = "327",
+            ["ReinforcedATV Spring"]               = "758",
+            ["ReinforcedTransmissionFork"]         = "757",
+            ["SpareParts"]                         = "328",
+            ["SteeringWheelATV"]                   = "261",
+            ["Transistor"]                         = "94",
+            ["Wiring"]                             = "92",
+            ["Wrench"]                             = "86",
+        },
+
+        ["resource weapon & armor parts"] = {
+                ["ArmBarrel"]              = "251",
+                ["ArmorRepairKit"]         = "293",
+                ["BasicBaseArmor"]         = "264",
+                ["BasicMeleeWeaponBase"]   = "267",
+                ["Butt"]                   = "247",
+                ["Gunlock"]                = "243",
+                ["ReinforcedArmorBase"]    = "265",
+                ["ReinforcedMeleeWeaponBase"] = "268",
+                ["RustyArmBarrel"]         = "252",
+                ["RustyButt"]              = "248",
+                ["RustyGunlock"]           = "244",
+                ["RustyWeaponParts"]       = "240",
+                ["SteelArmBarrel"]         = "253",
+                ["SteelArmorBase"]         = "266",
+                ["SteelArmorPlate"]        = "506",
+                ["SteelButt"]              = "249",
+                ["SteelGunlock"]           = "245",
+                ["SteelMeleeWeaponBase"]   = "269",
+                ["SteelWeaponParts"]       = "241",
+                ["TitaniumArmBarrel"]      = "254",
+                ["TitaniumArmorBase"]      = "347",
+                ["TitaniumArmorPlate"]     = "505",
+                ["TitaniumButt"]           = "250",
+                ["TitaniumGunlock"]        = "246",
+                ["TitaniumWeaponParts"]    = "242",
+                ["WeaponParts"]            = "239",
+                ["WeaponRepairKit"]        = "294",
+        },
+
+        ["resource blueprint & drawing"] = {
+            ["Tachis Drawing"] = "1223",
+            ["Katana Drawing"] = "1222",
+            ["AntiradiationHeadProtectionBlueprint"]   = "762",
+            ["AntiradiationProtectiveBootsBlueprint"]  = "765",
+            ["AntiradiationProtectiveJacketBlueprint"] = "763",
+            ["AntiradiationProtectivePantsBlueprint"]  = "764",
+            ["AssaultBlasterBlueprint"]                = "700",
+            ["BlueprintModifiedDoubleBarrelShotgun"]    = "1088",
+            ["DrawingOfA HomemadePistol"]              = "1101",
+            ["DrawingOfA HomemadeShotgun"]             = "1102",
+            ["DrawingOfA HomemadeSubmachineGun"]       = "1103",
+            ["FireSwordBlueprint"]                     = "668",
+            ["MechanicalHarpoonBlueprint"]             = "678",
+            ["P40ArmorCorpsBlueprint"]                 = "560",
+            ["P40BootsBlueprint"]                      = "562",
+            ["P40HelmetBlueprint"]                     = "559",
+            ["P40PowerExoskeletonBlueprint"]           = "561",
+            ["PowerGeneratorBlueprint"]                = "761",
+            ["SamopalsDrawing"]                        = "1100",
+            ["SmallBlasterBlueprint"]                  = "554",
+            ["TacticalBlasterBlueprint"]               = "698",
+            ["TwohandedAxBlueprint"]                   = "683",
+        },
+
+        ["resource biological & drops"] = {
+            ["AnimalBones"]             = "83",
+            ["AnimalHide"]              = "60",
+            ["BonesOfTheInfected"]      = "952",
+            ["BottlewiththebloodoftheHighCadaver"] = "483",
+            ["CadaverTooth"]            = "332",
+            ["CrocodileHide"]           = "62",
+            ["CrocodileLeather"]        = "63",
+            ["CrocodileTooth"]          = "257",
+            ["PieceofCadaverFlesh"]     = "333",
+            ["UniqueFleshOfTheInfected"] = "951",
+            ["UniqueInfectedTooth"]     = "950",
+        },
+
+        ["resource & farming"] = {
+            ["Bagofgrain"]              = "824",
+            ["Biofuels"]                = "752",
+            ["Bottleofmilk"]            = "820",
+            ["CocoaBeans"]              = "40",
+            ["Corn"]                    = "884",
+            ["CornFlour"]               = "885",
+            ["CornSeeds"]               = "883",
+            ["CucumberSeeds"]           = "1064",
+            ["DriedShrooms"]            = "421",
+            ["DryYeast"]                = "1070",
+            ["Fertilizerbag"]           = "833",
+            ["PotatoSeeds"]             = "886",
+            ["SweetPotatoFiber"]        = "42",
+            ["SweetPotatoStalk"]        = "41",
+            ["TomatoSeeds"]             = "1065",
+            ["Wheelofcheese"]           = "821",
+        },
+
+        ["resource valuable & collection"] = {
+            ["Artifact"]                = "446",
+            ["BankerPicture"]           = "341",
+            ["Cigars"]                  = "330",
+            ["Credit"]                  = "458",
+            ["Crystal"]                 = "501",
+            ["CuneaticDisk"]            = "450",
+            ["Gold"]                    = "270",
+            ["GoldBar"]                 = "335",
+            ["GoldCup"]                 = "509",
+            ["GoldJewelry"]             = "814",
+            ["GoldPlate"]               = "512",
+            ["Money"]                   = "340",
+            ["Silver"]                  = "530",
+            ["SilverBar"]               = "510",
+            ["SilverPlate"]             = "516",
+            ["ToyBear"]                 = "789",
+        },
+
+        ["resource others"] = {
+            ["Resources_RoadSign"]                = "43",
+            ["Alcohol"]                 = "405",
+            ["AmmoPowder"]              = "59", -- BlackPowder
+            ["🔥 Energy"]                  = "779",
+            ["Ethanol"]                 = "93",
+            ["Explosives"]              = "819",
+            ["KeyCard"]                 = "336",
+            ["LocalMap"]                = "329",
+            ["Radio"]                   = "326",
+            ["Smartphone"]              = "344",
+            ["UniversalMultitool"]      = "98",
+            ["XpBoosters"]              = "271",
+        },
+       
+    },
+    
+    ["♻️ Trash Item "] = {
+        ["Printed Circuit BoardKit"] = "1160",
+        ["AlarmClock"] = "373",
+        ["AncientPottery"] = "514",
+        ["AntifreezeBottle"] = "363",
+        ["Ashtray"] = "389",
+        ["BPS1StickersFree"] = "691",
+        ["BPS1StickersPremium"] = "690",
+        ["BagOfMoney"] = "1089",
+        ["Beaker"] = "522",
+        ["Binoculars"] = "377",
+        ["BiometricScanner"] = "388",
+        ["BloodiedBoot"] = "497",
+        ["Blowtorch"] = "355",
+        ["BluePlasticCanister"] = "367",
+        ["Boothammer"] = "548",
+        ["Breadbox"] = "546",
+        ["Brokenkeyboard"] = "541",
+        ["Brokenlaptop"] = "537",
+        ["Brokenmonitor"] = "538",
+        ["CapacitywithLiquidNitrogen"] = "390",
+        ["CartridgeBox"] = "496",
+        ["Chain"] = "292",
+        ["ChemicalFlask"] = "382",
+        ["Clamp"] = "376",
+        ["CoffeeCan"] = "387",
+        ["Coffeepot"] = "393",
+        ["CollectibleMagazine"] = "861",
+        ["CollectionAd"] = "862",
+        ["CommemorativePhoto"] = "1077",
+        ["Compass"] = "378",
+        ["CrackedMagnifyingGlass"] = "521",
+        ["DeckofCards"] = "551",
+        ["DieselGeneratorCoolingSystem"] = "840",
+        ["Dieselgeneratorcoolingfan"] = "841",
+        ["Electricitygeneratingpartofadieselgenerator"] = "839",
+        ["Electricmotor"] = "828",
+        ["ElectroschemeoftheRobot"] = "364",
+        ["EmptyBeerBottle"] = "369",
+        ["EmptyBottle"] = "200",
+        ["EmptyDrinkCan"] = "202",
+        ["EmptyGreenBottle"] = "366",
+        ["EmptyGreyBottle"] = "365",
+        ["EmptySprayCan"] = "368",
+        ["EmptyTinCan"] = "201",
+        ["EmptyWhiskeyBottle"] = "370",
+        ["ExpensiveTeas"] = "1087",
+        ["FlashDrive"] = "380",
+        ["GPS Navigator"] = "379",
+        ["Glue"] = "550",
+        ["Hacksaw"] = "385",
+        ["Hairbrush"] = "518",
+        ["Hose"] = "527",
+        ["Hourglass"] = "528",
+        ["ImprovedGuidanceChip"] = "362",
+        ["Infraredheater"] = "825",
+        ["JewelryofNoValue"] = "513",
+        ["Key"] = "552",
+        ["LaboratoryFunnel"] = "526",
+        ["Luminodiode"] = "375",
+        ["Magnet"] = "517",
+        ["MaraudersCoordinatesPurchase"] = "766",
+        ["MeasuringCup"] = "381",
+        ["MedicalScissors"] = "350",
+        ["Microscope"] = "351",
+        ["MicrotubewithCap"] = "525",
+        ["MilitaryMicrocircuit"] = "371",
+        ["NetworkStorage"] = "1091",
+        ["Oiler"] = "386",
+        ["OldFile"] = "1051",
+        ["OldTire"] = "1052",
+        ["Oldgascylinder"] = "832",
+        ["Oldharddrive"] = "542",
+        ["Packagingofheatresistantcottonwool"] = "830",
+        ["Pan"] = "547",
+        ["Pen"] = "384",
+        ["Phone"] = "457",
+        ["PieceOfMetalPipe"] = "291",
+        ["Plantlamp"] = "826",
+        ["PlasticPhotoFrame"] = "520",
+        ["Pliers"] = "536",
+        ["PoliceBadge"] = "391",
+        ["Pot"] = "392",
+        ["PowerfulMicroscope"] = "352",
+        ["RatPoison"] = "349",
+        ["Rebar"] = "539",
+        ["RecordPlayer"] = "498",
+        ["Report"] = "534",
+        ["ReportCreationInstruction"] = "535",
+        ["Scalpel"] = "359",
+        ["Screwdriver"] = "354",
+        ["ShardsofAncientUtensils"] = "515",
+        ["SilverDish"] = "511",
+        ["SilverPlug"] = "357",
+        ["SilverPocketWatch"] = "358",
+        ["Silvermedallion"] = "540",
+        ["Silvertableknife"] = "545",
+        ["Soap"] = "519",
+        ["SpoolOfThread"] = "1053",
+        ["TableFan"] = "353",
+        ["Tableknife"] = "544",
+        ["Tablespoon"] = "549",
+        ["TapeCassette"] = "499",
+        ["TestTube"] = "523",
+        ["TestTubeRack"] = "524",
+        ["Toaster"] = "361",
+        ["Toolbox"] = "831",
+        ["Tray"] = "543",
+        ["TurpentineBottle"] = "360",
+        ["Tweezers"] = "383",
+        ["Typewriter"] = "356",
+        ["VoiceRecorder"] = "372",
+        ["WaterCoolingRadiator"] = "829",
+        ["Watertaps"] = "827",
+        ["Wristwatch"] = "374",
+    },
+    
+    ["⚔️ Weapon"] = {
+
+        ["Range Weapon"] = {
+             ["strange machine rifle"] = "1216",
+            ["Storm Solstice gun"] = "1215",
+            ["AK70 blue Christmas "] = "1178",   
+            ["Cold Wanderers Crossbow"] = "1219",
+            ["ho ho ho rifle"] = "1214",
+            ["Frosty Night Carbine"] = "1213",
+            ["AK74"] = "151",
+            ["AK74_"] = "853",
+            ["AssaultRifle"] = "158",
+            ["ColtCanadaC7"] = "854",
+            ["Galil"] = "166",
+            ["HybridMachine"] = "159",
+            ["M16A2Christmas"] = "1118",
+            ["M16A2Halloween"] = "729",
+            ["M27D"] = "844",
+            ["M4"] = "856",
+            ["MP5Halloween"] = "730",
+            ["MP5Machine"] = "152",
+            ["MachineGun"] = "165",
+            ["RareMachine"] = "167",
+            ["SA80automaticrifle"] = "836",
+            ["SubmachineGun"] = "164",
+            ["TEC9"] = "842",
+            ["Wolfhound"] = "855",
+            ["AREXZERO1"] = "845",
+            ["ColtPython"] = "837",
+            ["ColtPythonHalloween"] = "728",
+            ["DesertEagle050AE"] = "846",
+            ["DesertEagleHalloween"] = "727",
+            ["EsculapianPistol"] = "323",
+            ["Glock19CAA MicroRoni"] = "843",
+            ["Pistol"] = "149",
+            ["Revolver"] = "148",
+            ["SmithWesson327MPR8"] = "838",
+            ["SmithWessonModel29"] = "849",
+            ["SmugglingPistol"] = "147",
+            ["SpecialForcesPistol"] = "160",
+             ["Doublebarrelshotgun"] = "850",
+            ["LargecaliberRifle"] = "168",
+            ["LightMachineGun"] = "169",
+            ["M24Rifle"] = "858",
+            ["ModifiedDoubleBarreledShotgun"] = "857",
+            ["PoliceShotgun"] = "153",
+            ["RareRifle"] = "161",
+            ["SK12Shotgun"] = "851",
+            ["SK12ShotgunHalloween"] = "731",
+            ["SVD"] = "157",
+            ["SVD Halloween"] = "732",
+            ["SniperRifle"] = "163",
+            ["SpecialForcesShotgun"] = "156",
+            ["Winchester1887"] = "852",
+            ["HomemadeCrossbow"] = "146",
+            ["HomemadeGun"] = "143",
+            ["HomemadePistolMachineGun"] = "145",
+            ["HomemadeRevolver"] = "142",
+            ["HomemadeShotgun"] = "144",
+        },     
+
+        ["NON RANGE WEAPON"] = {
+             ["Laughing Cleaver Christmas"] = "1127",
+             ["Festive axe Christmas"] = "1179",
+            ["Clause cane Christmas"] = "1182",
+             ["Deep Apprentices Hammer"] = "1218",
+             ["Samurai Christmas"] = "1180",
+            ["festive knive"] = "1181",
+            ["festive Mace"] = "1183",
+            ["sword of cold wandered"] = "1184",
+             ["katana Tachi"] = "1221",
+             ["Katana"] = "1220",
+            ["AdvancedMachete"] = "140",
+            ["Ax"] = "139",
+            ["AxPipe"] = "118",
+            ["Bat"] = "132",
+            ["BatWithChains"] = "138",
+            ["BayonetKnife"] = "122",
+            ["BoneAx"] = "117",
+            ["BoneHammer"] = "116",
+            ["BoneKnife"] = "119",
+            ["Copperax"] = "463",
+            ["Copperpickaxe"] = "464",
+            ["Cudgel"] = "123",
+            ["CudgelSteelFangs"] = "417",
+            ["CudgelWithFangs"] = "120",
+            ["Cutter"] = "133",
+            ["Cutting"] = "150",
+            ["Dagon"] = "325",
+            ["DancingAx"] = "1055",
+            ["DeadlyCudgel"] = "394",
+            ["FireAxe"] = "128",
+            ["FirePick"] = "127",
+            ["Frankenstein"] = "469",
+            ["GearAxe"] = "130",
+            ["HalloweenKnife"] = "735",
+            ["HomemadeAx"] = "135",
+            ["HomemadeSword"] = "137",
+            ["IronAx"] = "125",
+            ["IronPickaxe"] = "124",
+            ["JacktheRippersKnife"] = "734",
+            ["JasonsMachete"] = "733",
+            ["KatanaHalloween"] = "126",
+            ["LastJudgment"] = "131",
+            ["Mace"] = "134",
+            ["Machete"] = "136",
+            ["Macuahuitl"] = "395",
+            ["MadFury"] = "1054",
+            ["Mount"] = "129",
+            ["Ritualknife"] = "414",
+            ["Spear"] = "121",
+            ["Steelax"] = "465",
+            ["Steelax2"] = "478",
+            ["Steelpickaxe"] = "466",
+            ["Steelpickaxe2"] = "479",
+            ["Titaniumax"] = "467",
+            ["Titaniumax2"] = "480",
+            ["Titaniumpickaxe"] = "468",
+            ["Titaniumpickaxe2"] = "481",
+            ["Tomahawk"] = "416",
+            ["Wingofdeath"] = "415",
+        },
+
+        ["futuristic Weapon"] = {
+            ["AlienShockBaton"] = "706",
+            ["AssaultBlaster"] = "699",
+            ["AtomicPulverizer"] = "746",
+            ["Atomizer"] = "745",
+            ["BigAlienShockBaton"] = "704",
+            ["Disintegrator"] = "747",
+            ["ImprovedBlaster"] = "835",
+            ["MediumAlienShockBaton"] = "705",
+            ["RareGun"] = "154",
+            ["ScarabGun"] = "324",
+            ["SmallAlienShockBaton"] = "703",
+            ["SmallBlaster"] = "553",
+            ["SnowballGun"] = "778",
+            ["SteelGun"] = "155",
+            ["TacticalBlaster"] = "697",
+            ["TitaniumGun"] = "162",
+            ["ElectricHammer"] = "649",
+            ["ElectricHammerT2"] = "656",
+            ["ElectricHammerT3"] = "657",
+            ["ElectricHammerT4"] = "658",
+            ["ElectricHammerT5"] = "659",
+            ["FireSword"] = "648",
+            ["FireSwordT2"] = "652",
+            ["FireSwordT3"] = "653",
+            ["FireSwordT4"] = "654",
+            ["FireSwordT5"] = "655",
+            ["MechanicalHarpoon"] = "650",
+            ["MechanicalHarpoonT2"] = "660",
+            ["MechanicalHarpoonT3"] = "661",
+            ["MechanicalHarpoonT4"] = "662",
+            ["MechanicalHarpoonT5"] = "663",
+            ["TwohandedAx"] = "651",
+            ["TwohandedAxT2"] = "664",
+            ["TwohandedAxT3"] = "665",
+            ["TwohandedAxT4"] = "666",
+            ["TwohandedAxT5"] = "667",
+        },
+
     },
 
-    ["🔧 Modifier"] = {
+    ["🔧 Modifier Weapon"] = {
 
         ["modifier ak74"] = {
             ["Modifiers AK74Scope"] = "969",
@@ -889,475 +1326,6 @@ ItemExplorer.item_data = {
             ["Modifiers SpecialForcesShotgunScope"] = "1195",
         },
         
-    },
-
-    ["📦 Resource"] = {
-        ["resource basic material"] = {
-            ["Resources Aluminum"]               = "529",
-            ["Resources AluminumIngot"]          = "502",
-            ["Resources AluminumPlate"]          = "503",
-            ["Resources Bamboo"]                 = "45",
-            ["Resources Charcoal"]               = "66",
-            ["Resources Clay"]                   = "1075",
-            ["Resources ClaysandMortar"]         = "64",
-            ["Resources Cloth"]                  = "55",
-            ["Resources Coal"]                   = "492",
-            ["Resources CopperBar"]              = "74",
-            ["Resources CopperOre"]              = "53",
-            ["Resources CopperPlate"]            = "75",
-            ["Resources DenseFabric"]            = "56",
-            ["Resources GlassShards"]            = "255",
-            ["Resources Hardwood"]               = "49",
-            ["Resources HardwoodPlank"]          = "67",
-            ["Resources IronBar"]                = "71",
-            ["Resources IronOre"]                = "52",
-            ["Resources IronPlate"]              = "72",
-            ["Resources Leather"]                = "61",
-            ["Resources Limestone"]              = "812",
-            ["Resources Nails"]                  = "73",
-            ["Resources PlasticWreckage"]        = "256",
-            ["Resources Plexiglass"]             = "493",
-            ["Resources Quicklime"]              = "813",
-            ["Resources Rope"]                   = "57",
-            ["Resources RubberParts"]            = "80",
-            ["Resources Sand"]                   = "1076",
-            ["Resources Sandstone"]              = "51",
-            ["Resources SandstoneBrick"]         = "69",
-            ["Resources ScrapMetal"]             = "70",
-            ["Resources SteelBar"]               = "76",
-            ["Resources SteelPlate"]             = "77",
-            ["Resources Sulfur"]                 = "47",
-            ["Resources SulfurOre"]              = "46",
-            ["Resources TitanBar"]               = "78",
-            ["Resources TitanOre"]               = "54",
-            ["Resources TitanPlate"]             = "79",
-            ["Resources ValuableWood"]           = "50",
-            ["Resources ValuableWoodPlank"]      = "68",
-            ["Resources Wood"]                   = "48",
-            ["Resources WoodFiber"]              = "1086",
-            ["Resources WoodPlank"]              = "65",
-        },
-
- 
-        ["resource electronics & parts"] = {
-            ["Resources ATV ElectricPowerSteering"]           = "760",
-            ["Resources ATV Engine"]                         = "95",
-            ["Resources ATV GasTank"]                        = "258",
-            ["Resources ATV Parts"]                          = "759",
-            ["Resources ATV Wheel"]                          = "88",
-            ["Resources Batteries"]                          = "532",
-            ["Resources Bearing"]                            = "91",
-            ["Resources Bolts"]                              = "85",
-            ["Resources DuctTape"]                           = "87",
-            ["Resources ElectronicParts"]                    = "81",
-            ["Resources EnginePart"]                         = "97",
-            ["Resources Flashlight"]                         = "96",
-            ["Resources Microcircuit"]                       = "89",
-            ["Resources PC Bset"]                            = "1050",
-            ["Resources RareChip"]                           = "327",
-            ["Resources ReinforcedATV Spring"]               = "758",
-            ["Resources ReinforcedTransmissionFork"]         = "757",
-            ["Resources SpareParts"]                         = "328",
-            ["Resources SteeringWheelATV"]                   = "261",
-            ["Resources Transistor"]                         = "94",
-            ["Resources Wiring"]                             = "92",
-            ["Resources Wrench"]                             = "86",
-        },
-
-        ["resource weapon & armor parts"] = {
-                ["Resources ArmBarrel"]              = "251",
-                ["Resources ArmorRepairKit"]         = "293",
-                ["Resources BasicBaseArmor"]         = "264",
-                ["Resources BasicMeleeWeaponBase"]   = "267",
-                ["Resources Butt"]                   = "247",
-                ["Resources Gunlock"]                = "243",
-                ["Resources ReinforcedArmorBase"]    = "265",
-                ["Resources ReinforcedMeleeWeaponBase"] = "268",
-                ["Resources RustyArmBarrel"]         = "252",
-                ["Resources RustyButt"]              = "248",
-                ["Resources RustyGunlock"]           = "244",
-                ["Resources RustyWeaponParts"]       = "240",
-                ["Resources SteelArmBarrel"]         = "253",
-                ["Resources SteelArmorBase"]         = "266",
-                ["Resources SteelArmorPlate"]        = "506",
-                ["Resources SteelButt"]              = "249",
-                ["Resources SteelGunlock"]           = "245",
-                ["Resources SteelMeleeWeaponBase"]   = "269",
-                ["Resources SteelWeaponParts"]       = "241",
-                ["Resources TitaniumArmBarrel"]      = "254",
-                ["Resources TitaniumArmorBase"]      = "347",
-                ["Resources TitaniumArmorPlate"]     = "505",
-                ["Resources TitaniumButt"]           = "250",
-                ["Resources TitaniumGunlock"]        = "246",
-                ["Resources TitaniumWeaponParts"]    = "242",
-                ["Resources WeaponParts"]            = "239",
-                ["Resources WeaponRepairKit"]        = "294",
-        },
-
-        ["resource blueprint & drawing"] = {
-            ["Resources AntiradiationHeadProtectionBlueprint"]   = "762",
-            ["Resources AntiradiationProtectiveBootsBlueprint"]  = "765",
-            ["Resources AntiradiationProtectiveJacketBlueprint"] = "763",
-            ["Resources AntiradiationProtectivePantsBlueprint"]  = "764",
-            ["Resources AssaultBlasterBlueprint"]                = "700",
-            ["Resources BlueprintModifiedDoubleBarrelShotgun"]    = "1088",
-            ["Resources DrawingOfA HomemadePistol"]              = "1101",
-            ["Resources DrawingOfA HomemadeShotgun"]             = "1102",
-            ["Resources DrawingOfA HomemadeSubmachineGun"]       = "1103",
-            ["Resources FireSwordBlueprint"]                     = "668",
-            ["Resources MechanicalHarpoonBlueprint"]             = "678",
-            ["Resources P40ArmorCorpsBlueprint"]                 = "560",
-            ["Resources P40BootsBlueprint"]                      = "562",
-            ["Resources P40HelmetBlueprint"]                     = "559",
-            ["Resources P40PowerExoskeletonBlueprint"]           = "561",
-            ["Resources PowerGeneratorBlueprint"]                = "761",
-            ["Resources SamopalsDrawing"]                        = "1100",
-            ["Resources SmallBlasterBlueprint"]                  = "554",
-            ["Resources TacticalBlasterBlueprint"]               = "698",
-            ["Resources TwohandedAxBlueprint"]                   = "683",
-        },
-
-        ["resource biological & drops"] = {
-            ["Resources AnimalBones"]             = "83",
-            ["Resources AnimalHide"]              = "60",
-            ["Resources BonesOfTheInfected"]      = "952",
-            ["Resources BottlewiththebloodoftheHighCadaver"] = "483",
-            ["Resources CadaverTooth"]            = "332",
-            ["Resources CrocodileHide"]           = "62",
-            ["Resources CrocodileLeather"]        = "63",
-            ["Resources CrocodileTooth"]          = "257",
-            ["Resources PieceofCadaverFlesh"]     = "333",
-            ["Resources UniqueFleshOfTheInfected"] = "951",
-            ["Resources UniqueInfectedTooth"]     = "950",
-        },
-
-        ["resource food & farming"] = {
-            ["Resources Bagofgrain"]              = "824",
-            ["Resources Biofuels"]                = "752",
-            ["Resources Bottleofmilk"]            = "820",
-            ["Resources CocoaBeans"]              = "40",
-            ["Resources Corn"]                    = "884",
-            ["Resources CornFlour"]               = "885",
-            ["Resources CornSeeds"]               = "883",
-            ["Resources CucumberSeeds"]           = "1064",
-            ["Resources DriedShrooms"]            = "421",
-            ["Resources DryYeast"]                = "1070",
-            ["Resources Fertilizerbag"]           = "833",
-            ["Resources PotatoSeeds"]             = "886",
-            ["Resources SweetPotatoFiber"]        = "42",
-            ["Resources SweetPotatoStalk"]        = "41",
-            ["Resources TomatoSeeds"]             = "1065",
-            ["Resources Wheelofcheese"]           = "821",
-        },
-
-        ["resource valuable & collection"] = {
-            ["Resources Artifact"]                = "446",
-            ["Resources BankerPicture"]           = "341",
-            ["Resources Cigars"]                  = "330",
-            ["Resources Credit"]                  = "458",
-            ["Resources Crystal"]                 = "501",
-            ["Resources CuneaticDisk"]            = "450",
-            ["Resources Gold"]                    = "270",
-            ["Resources GoldBar"]                 = "335",
-            ["Resources GoldCup"]                 = "509",
-            ["Resources GoldJewelry"]             = "814",
-            ["Resources GoldPlate"]               = "512",
-            ["Resources Money"]                   = "340",
-            ["Resources Silver"]                  = "530",
-            ["Resources SilverBar"]               = "510",
-            ["Resources SilverPlate"]             = "516",
-            ["Resources ToyBear"]                 = "789",
-        },
-
-        ["resource others"] = {
-            ["Resources_RoadSign"]                = "43",
-            ["Resources Alcohol"]                 = "405",
-            ["Resources AmmoPowder"]              = "59", -- BlackPowder
-            ["🔥 Resources Energy"]                  = "779",
-            ["Resources Ethanol"]                 = "93",
-            ["Resources Explosives"]              = "819",
-            ["Resources KeyCard"]                 = "336",
-            ["Resources LocalMap"]                = "329",
-            ["Resources Radio"]                   = "326",
-            ["Resources Smartphone"]              = "344",
-            ["Resources UniversalMultitool"]      = "98",
-            ["Resources XpBoosters"]              = "271",
-        },
-       
-    },
-    
-    ["♻️ Trash"] = {
-        ["Trash AlarmClock"] = "373",
-        ["Trash AncientPottery"] = "514",
-        ["Trash AntifreezeBottle"] = "363",
-        ["Trash Ashtray"] = "389",
-        ["Trash BPS1StickersFree"] = "691",
-        ["Trash BPS1StickersPremium"] = "690",
-        ["Trash BagOfMoney"] = "1089",
-        ["Trash Beaker"] = "522",
-        ["Trash Binoculars"] = "377",
-        ["Trash BiometricScanner"] = "388",
-        ["Trash BloodiedBoot"] = "497",
-        ["Trash Blowtorch"] = "355",
-        ["Trash BluePlasticCanister"] = "367",
-        ["Trash Boothammer"] = "548",
-        ["Trash Breadbox"] = "546",
-        ["Trash Brokenkeyboard"] = "541",
-        ["Trash Brokenlaptop"] = "537",
-        ["Trash Brokenmonitor"] = "538",
-        ["Trash CapacitywithLiquidNitrogen"] = "390",
-        ["Trash CartridgeBox"] = "496",
-        ["Trash Chain"] = "292",
-        ["Trash ChemicalFlask"] = "382",
-        ["Trash Clamp"] = "376",
-        ["Trash CoffeeCan"] = "387",
-        ["Trash Coffeepot"] = "393",
-        ["Trash CollectibleMagazine"] = "861",
-        ["Trash CollectionAd"] = "862",
-        ["Trash CommemorativePhoto"] = "1077",
-        ["Trash Compass"] = "378",
-        ["Trash CrackedMagnifyingGlass"] = "521",
-        ["Trash DeckofCards"] = "551",
-        ["Trash DieselGeneratorCoolingSystem"] = "840",
-        ["Trash Dieselgeneratorcoolingfan"] = "841",
-        ["Trash Electricitygeneratingpartofadieselgenerator"] = "839",
-        ["Trash Electricmotor"] = "828",
-        ["Trash ElectroschemeoftheRobot"] = "364",
-        ["Trash EmptyBeerBottle"] = "369",
-        ["Trash EmptyBottle"] = "200",
-        ["Trash EmptyDrinkCan"] = "202",
-        ["Trash EmptyGreenBottle"] = "366",
-        ["Trash EmptyGreyBottle"] = "365",
-        ["Trash EmptySprayCan"] = "368",
-        ["Trash EmptyTinCan"] = "201",
-        ["Trash EmptyWhiskeyBottle"] = "370",
-        ["Trash ExpensiveTeas"] = "1087",
-        ["Trash FlashDrive"] = "380",
-        ["Trash GPS Navigator"] = "379",
-        ["Trash Glue"] = "550",
-        ["Trash Hacksaw"] = "385",
-        ["Trash Hairbrush"] = "518",
-        ["Trash Hose"] = "527",
-        ["Trash Hourglass"] = "528",
-        ["Trash ImprovedGuidanceChip"] = "362",
-        ["Trash Infraredheater"] = "825",
-        ["Trash JewelryofNoValue"] = "513",
-        ["Trash Key"] = "552",
-        ["Trash LaboratoryFunnel"] = "526",
-        ["Trash Luminodiode"] = "375",
-        ["Trash Magnet"] = "517",
-        ["Trash MaraudersCoordinatesPurchase"] = "766",
-        ["Trash MeasuringCup"] = "381",
-        ["Trash MedicalScissors"] = "350",
-        ["Trash Microscope"] = "351",
-        ["Trash MicrotubewithCap"] = "525",
-        ["Trash MilitaryMicrocircuit"] = "371",
-        ["Trash NetworkStorage"] = "1091",
-        ["Trash Oiler"] = "386",
-        ["Trash OldFile"] = "1051",
-        ["Trash OldTire"] = "1052",
-        ["Trash Oldgascylinder"] = "832",
-        ["Trash Oldharddrive"] = "542",
-        ["Trash Packagingofheatresistantcottonwool"] = "830",
-        ["Trash Pan"] = "547",
-        ["Trash Pen"] = "384",
-        ["Trash Phone"] = "457",
-        ["Trash PieceOfMetalPipe"] = "291",
-        ["Trash Plantlamp"] = "826",
-        ["Trash PlasticPhotoFrame"] = "520",
-        ["Trash Pliers"] = "536",
-        ["Trash PoliceBadge"] = "391",
-        ["Trash Pot"] = "392",
-        ["Trash PowerfulMicroscope"] = "352",
-        ["Trash RatPoison"] = "349",
-        ["Trash Rebar"] = "539",
-        ["Trash RecordPlayer"] = "498",
-        ["Trash Report"] = "534",
-        ["Trash ReportCreationInstruction"] = "535",
-        ["Trash Scalpel"] = "359",
-        ["Trash Screwdriver"] = "354",
-        ["Trash ShardsofAncientUtensils"] = "515",
-        ["Trash SilverDish"] = "511",
-        ["Trash SilverPlug"] = "357",
-        ["Trash SilverPocketWatch"] = "358",
-        ["Trash Silvermedallion"] = "540",
-        ["Trash Silvertableknife"] = "545",
-        ["Trash Soap"] = "519",
-        ["Trash SpoolOfThread"] = "1053",
-        ["Trash TableFan"] = "353",
-        ["Trash Tableknife"] = "544",
-        ["Trash Tablespoon"] = "549",
-        ["Trash TapeCassette"] = "499",
-        ["Trash TestTube"] = "523",
-        ["Trash TestTubeRack"] = "524",
-        ["Trash Toaster"] = "361",
-        ["Trash Toolbox"] = "831",
-        ["Trash Tray"] = "543",
-        ["Trash TurpentineBottle"] = "360",
-        ["Trash Tweezers"] = "383",
-        ["Trash Typewriter"] = "356",
-        ["Trash VoiceRecorder"] = "372",
-        ["Trash WaterCoolingRadiator"] = "829",
-        ["Trash Watertaps"] = "827",
-        ["Trash Wristwatch"] = "374",
-    },
-    
-    ["⚔️ Weapon"] = {
-        ["weapon assault rifle & smg"] = {
-            ["Weapons AK74"] = "151",
-            ["Weapons AK74_"] = "853",
-            ["Weapons AssaultRifle"] = "158",
-            ["Weapons ColtCanadaC7"] = "854",
-            ["Weapons Galil"] = "166",
-            ["Weapons HybridMachine"] = "159",
-            ["Weapons M16A2Christmas"] = "1118",
-            ["Weapons M16A2Halloween"] = "729",
-            ["Weapons M27D"] = "844",
-            ["Weapons M4"] = "856",
-            ["Weapons MP5Halloween"] = "730",
-            ["Weapons MP5Machine"] = "152",
-            ["Weapons MachineGun"] = "165",
-            ["Weapons RareMachine"] = "167",
-            ["Weapons SA80automaticrifle"] = "836",
-            ["Weapons SubmachineGun"] = "164",
-            ["Weapons TEC9"] = "842",
-            ["Weapons Wolfhound"] = "855",
-        },
-
-        ["weapon pistol & revolver"] = {
-            ["Weapons AREXZERO1"] = "845",
-            ["Weapons ColtPython"] = "837",
-            ["Weapons ColtPythonHalloween"] = "728",
-            ["Weapons DesertEagle050AE"] = "846",
-            ["Weapons DesertEagleHalloween"] = "727",
-            ["Weapons EsculapianPistol"] = "323",
-            ["Weapons Glock19CAA MicroRoni"] = "843",
-            ["Weapons Pistol"] = "149",
-            ["Weapons Revolver"] = "148",
-            ["Weapons SmithWesson327MPR8"] = "838",
-            ["Weapons SmithWessonModel29"] = "849",
-            ["Weapons SmugglingPistol"] = "147",
-            ["Weapons SpecialForcesPistol"] = "160",
-        },
-
-        ["weapon shotgun & rifle"] = {
-            ["Weapons Doublebarrelshotgun"] = "850",
-            ["Weapons LargecaliberRifle"] = "168",
-            ["Weapons LightMachineGun"] = "169",
-            ["Weapons M24Rifle"] = "858",
-            ["Weapons ModifiedDoubleBarreledShotgun"] = "857",
-            ["Weapons PoliceShotgun"] = "153",
-            ["Weapons RareRifle"] = "161",
-            ["Weapons SK12Shotgun"] = "851",
-            ["Weapons SK12ShotgunHalloween"] = "731",
-            ["Weapons SVD"] = "157",
-            ["Weapons SVD Halloween"] = "732",
-            ["Weapons SniperRifle"] = "163",
-            ["Weapons SpecialForcesShotgun"] = "156",
-            ["Weapons Winchester1887"] = "852",
-        },
-
-        ["weapon melee & tools"] = {
-            ["Weapons AdvancedMachete"] = "140",
-            ["Weapons Ax"] = "139",
-            ["Weapons AxPipe"] = "118",
-            ["Weapons Bat"] = "132",
-            ["Weapons BatWithChains"] = "138",
-            ["Weapons BayonetKnife"] = "122",
-            ["Weapons BoneAx"] = "117",
-            ["Weapons BoneHammer"] = "116",
-            ["Weapons BoneKnife"] = "119",
-            ["Weapons Copperax"] = "463",
-            ["Weapons Copperpickaxe"] = "464",
-            ["Weapons Cudgel"] = "123",
-            ["Weapons CudgelSteelFangs"] = "417",
-            ["Weapons CudgelWithFangs"] = "120",
-            ["Weapons Cutter"] = "133",
-            ["Weapons Cutting"] = "150",
-            ["Weapons Dagon"] = "325",
-            ["Weapons DancingAx"] = "1055",
-            ["Weapons DeadlyCudgel"] = "394",
-            ["Weapons FireAxe"] = "128",
-            ["Weapons FirePick"] = "127",
-            ["Weapons Frankenstein"] = "469",
-            ["Weapons GearAxe"] = "130",
-            ["Weapons HalloweenKnife"] = "735",
-            ["Weapons HomemadeAx"] = "135",
-            ["Weapons HomemadeSword"] = "137",
-            ["Weapons IronAx"] = "125",
-            ["Weapons IronPickaxe"] = "124",
-            ["Weapons JacktheRippersKnife"] = "734",
-            ["Weapons JasonsMachete"] = "733",
-            ["Weapons KatanaHalloween"] = "126",
-            ["Weapons LastJudgment"] = "131",
-            ["Weapons Mace"] = "134",
-            ["Weapons Machete"] = "136",
-            ["Weapons Macuahuitl"] = "395",
-            ["Weapons MadFury"] = "1054",
-            ["Weapons Mount"] = "129",
-            ["Weapons Ritualknife"] = "414",
-            ["Weapons Spear"] = "121",
-            ["Weapons Steelax"] = "465",
-            ["Weapons Steelax2"] = "478",
-            ["Weapons Steelpickaxe"] = "466",
-            ["Weapons Steelpickaxe2"] = "479",
-            ["Weapons Titaniumax"] = "467",
-            ["Weapons Titaniumax2"] = "480",
-            ["Weapons Titaniumpickaxe"] = "468",
-            ["Weapons Titaniumpickaxe2"] = "481",
-            ["Weapons Tomahawk"] = "416",
-            ["Weapons Wingofdeath"] = "415",
-        },
-
-        ["weapon futuristic & special"] = {
-            ["Weapons AlienShockBaton"] = "706",
-            ["Weapons AssaultBlaster"] = "699",
-            ["Weapons AtomicPulverizer"] = "746",
-            ["Weapons Atomizer"] = "745",
-            ["Weapons BigAlienShockBaton"] = "704",
-            ["Weapons Disintegrator"] = "747",
-            ["Weapons ImprovedBlaster"] = "835",
-            ["Weapons MediumAlienShockBaton"] = "705",
-            ["Weapons RareGun"] = "154",
-            ["Weapons ScarabGun"] = "324",
-            ["Weapons SmallAlienShockBaton"] = "703",
-            ["Weapons SmallBlaster"] = "553",
-            ["Weapons SnowballGun"] = "778",
-            ["Weapons SteelGun"] = "155",
-            ["Weapons TacticalBlaster"] = "697",
-            ["Weapons TitaniumGun"] = "162",
-        },
-
-        ["weapon homemade"] = {
-            ["Weapons HomemadeCrossbow"] = "146",
-            ["Weapons HomemadeGun"] = "143",
-            ["Weapons HomemadePistolMachineGun"] = "145",
-            ["Weapons HomemadeRevolver"] = "142",
-            ["Weapons HomemadeShotgun"] = "144",
-        },
-
-        ["weapon ALIEN"] = {
-            ["Weapons ElectricHammer"] = "649",
-            ["Weapons ElectricHammerT2"] = "656",
-            ["Weapons ElectricHammerT3"] = "657",
-            ["Weapons ElectricHammerT4"] = "658",
-            ["Weapons ElectricHammerT5"] = "659",
-            ["Weapons FireSword"] = "648",
-            ["Weapons FireSwordT2"] = "652",
-            ["Weapons FireSwordT3"] = "653",
-            ["Weapons FireSwordT4"] = "654",
-            ["Weapons FireSwordT5"] = "655",
-            ["Weapons MechanicalHarpoon"] = "650",
-            ["Weapons MechanicalHarpoonT2"] = "660",
-            ["Weapons MechanicalHarpoonT3"] = "661",
-            ["Weapons MechanicalHarpoonT4"] = "662",
-            ["Weapons MechanicalHarpoonT5"] = "663",
-            ["Weapons TwohandedAx"] = "651",
-            ["Weapons TwohandedAxT2"] = "664",
-            ["Weapons TwohandedAxT3"] = "665",
-            ["Weapons TwohandedAxT4"] = "666",
-            ["Weapons TwohandedAxT5"] = "667",
-        },
     },
       
 }
@@ -1943,114 +1911,6 @@ end
 
 
 
--- ========================================================
--- FUNGSI UNTUK MELIHAT LIST ITEM SAJA (TANPA ID)
--- ========================================================
-
-function ItemExplorer.show_item_list_only()
-    -- PILIH KATEGORI TERLEBIH DAHULU
-    local categories = {}
-    for cat, _ in pairs(ItemExplorer.item_data) do
-        table.insert(categories, cat)
-    end
-    table.sort(categories)
-    
-    local cat_choice = gg.choice(categories, nil, "📋 VIEW ITEM LIST - SELECT CATEGORY")
-    
-    if not cat_choice then
-        return
-    end
-    
-    local selected_category = categories[cat_choice]
-    local subcategories_data = ItemExplorer.item_data[selected_category]
-    
-    -- Cek apakah ada subkategori
-    local has_subcategories = false
-    if type(subcategories_data) == "table" then
-        for _, value in pairs(subcategories_data) do
-            if type(value) == "table" then
-                has_subcategories = true
-                break
-            end
-        end
-    end
-    
-    if has_subcategories then
-        -- Tampilkan subkategori
-        local subcats = {}
-        for subcat_name, _ in pairs(subcategories_data) do
-            table.insert(subcats, subcat_name)
-        end
-        table.sort(subcats)
-        
-        local subcat_choice = gg.choice(subcats, nil, selected_category .. " → SUBCATEGORIES")
-        
-        if not subcat_choice then
-            return
-        end
-        
-        -- Pilih subkategori spesifik
-        local selected_subcat = subcats[subcat_choice]
-        local items_data = subcategories_data[selected_subcat]
-        
-        if type(items_data) == "table" then
-            local items_list = {}
-            for item_name, item_value in pairs(items_data) do
-                table.insert(items_list, {
-                    display_name = item_name,
-                    value = item_value,
-                    category = selected_category,
-                    subcategory = selected_subcat
-                })
-            end
-            
-            table.sort(items_list, function(a, b) 
-                return a.display_name < b.display_name
-            end)
-            
-            -- Buat string untuk menampilkan semua item (TANPA ID)
-            local item_text = "📋 ITEM LIST: " .. selected_category .. " → " .. selected_subcat .. "\n"
-            item_text = item_text .. "━━━━━━━━━━━━━━━━━━━━━━\n"
-            
-            for i, item in ipairs(items_list) do
-                item_text = item_text .. "• " .. item.display_name .. "\n"
-            end
-            
-            item_text = item_text .. "\n━━━━━━━━━━━━━━━━━━━━━━\n"
-            item_text = item_text .. "Total: " .. #items_list .. " items"
-            
-            gg.alert(item_text)
-        end
-    else
-        -- Tidak ada subkategori, langsung tampilkan item
-        local items_list = {}
-        for item_name, item_value in pairs(subcategories_data) do
-            table.insert(items_list, {
-                display_name = item_name,
-                value = item_value,
-                category = selected_category,
-                subcategory = nil
-            })
-        end
-        
-        table.sort(items_list, function(a, b) 
-            return a.display_name < b.display_name
-        end)
-        
-        -- Buat string untuk menampilkan semua item (TANPA ID)
-        local item_text = "📋 ITEM LIST: " .. selected_category .. "\n"
-        item_text = item_text .. "━━━━━━━━━━━━━━━━━━━━━━\n"
-        
-        for i, item in ipairs(items_list) do
-            item_text = item_text .. "• " .. item.display_name .. "\n"
-        end
-        
-        item_text = item_text .. "\n━━━━━━━━━━━━━━━━━━━━━━\n"
-        item_text = item_text .. "Total: " .. #items_list .. " items"
-        
-        gg.alert(item_text)
-    end
-end
 
 
 
@@ -3460,8 +3320,9 @@ function welcome_screen()
         "📢  CHANGELOG / UPDATE:\n" ..
         line .. "\n" ..
         "✅  Fix UI & Header Layout\n" ..
-        "✅  Improved Search Performance\n" ..
         "✅  New Database Item View\n" ..
+        "✅  Add new mod unlimited gold\n" ..
+        
         line .. "\n\n" ..
         
         "[ VERSION 2.0 - 2026 ]"
@@ -3554,19 +3415,19 @@ function show_menu()
     local main = gg.choice({
         "🚀  Mod Menu [" .. activeCount .. "/10 Mods]", -- 1
         
-        "🔥 ITEM REPLACEMENT",                -- 2 (Header)
-        " ╰▶ 🔄  Auto Swap Item Inbox",      -- 3
-        " ╰▶ 📂  View All Item List",        -- 4
         
-        "🎮 HACK QTY & RESOURCES",            -- 5 (Header)
-        " ╰▶ ✏️  Edit Quantity Backpack",    -- 6
-        " ╰▶ 💰  Edit All Coins",             -- 7
-        " ╰▶ ⛽  Gasoline Hack",              -- 8
+        "🔄  Auto Swap Item Inbox",      -- 2
+        
+        
+        "🎮 HACK QTY & RESOURCES",            -- 3
+        " ╰▶ ✏️  Edit Quantity Backpack",    -- 4
+        " ╰▶ 💰  Edit All Coins",             -- 5
+        " ╰▶ ⛽  Gasoline Hack",              -- 6
                
-        "⚙️ SETTINGS",                        -- 9 (Header)
-        " ╰▶ 🧹  Reset Search",               -- 10
-        " ╰▶ ℹ️  Info Script",                -- 11
-        " ╰▶ ❌  Exit Script"                 -- 12
+        "⚙️ SETTINGS",                        -- 7 (Header)
+        " ╰▶ 🧹  Reset Search",               -- 8
+        " ╰▶ ℹ️  Info Script",                -- 9
+        " ╰▶ ❌  Exit Script"                 -- 10
     }, nil, header)
 
     if main == nil then return end
@@ -3574,15 +3435,14 @@ function show_menu()
     -- LOGIKA PERBAIKAN (Index harus pas dengan list di atas)
     if main == 1 then 
         submenu_mod()
-    elseif main == 3 then 
+    elseif main == 2 then 
         ItemExplorer.auto_swap_item_with_subcategories()
+    
     elseif main == 4 then 
-        ItemExplorer.show_item_list_only()
-    elseif main == 6 then 
         ItemExplorer.edit_quantity()
-    elseif main == 7 then 
+    elseif main == 5 then 
         ItemExplorer.scan_coins()
-    elseif main == 8 then
+    elseif main == 6 then
         local sub = gg.choice({
             "⛽ Get Gasoline (-99M)", 
             "♻️ Restore (350)", 
@@ -3595,12 +3455,12 @@ function show_menu()
             ItemExplorer.reset_search() 
             ItemExplorer.restore_gasoline() 
         end
-    elseif main == 10 then 
+    elseif main == 8 then 
         ItemExplorer.reset_search()
         gg.toast("🧹 Search Reset Done!")
-    elseif main == 11 then 
+    elseif main == 9 then 
         welcome_screen()
-    elseif main == 12 then 
+    elseif main == 10 then 
         os.exit() 
     else
         -- Jika user klik Header (index 2, 5, 9), menu akan muncul kembali
