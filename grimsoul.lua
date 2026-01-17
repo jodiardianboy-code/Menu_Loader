@@ -4467,7 +4467,7 @@ end
 ----------------------------------------------------
 -- INSTANT KILL (9999+ Damage) work only in 
 ----------------------------------------------------
-function toggle_instant_kill()
+function toggle_instant_khill()
     if STATE.INSTANT_KILL then
         -- Restore original code
         sv(CACHE.INSTANT_KILL)
@@ -4557,6 +4557,109 @@ function toggle_instant_kill()
 
     STATE.INSTANT_KILL = true
     gg.toast("☠️ INSTANT KILL ON - 9999+ Damage!")
+end
+
+----------------------------------------------------
+-- INSTANT KILL - FOR ALL WEAPONS (MELEE + RANGE)
+----------------------------------------------------
+function toggle_instant_kill()
+    if STATE.INSTANT_KILL then
+        sv(CACHE.INSTANT_KILL)
+        CACHE.INSTANT_KILL = {}
+        STATE.INSTANT_KILL = false
+        gg.toast("🔴 Instant Kill OFF")
+        return
+    end
+
+    -- Cari GetWeaponDamageBonus di WeaponAttackActivity (parent)
+    if not METHOD.INSTANT_KILL then
+        gg.toast("🔍 Scanning GetWeaponDamageBonus...")
+        METHOD.INSTANT_KILL = findMethod("WeaponAttackActivity", "GetWeaponDamageBonus")
+        
+        if #METHOD.INSTANT_KILL == 0 then
+            gg.alert("❌ GetWeaponDamageBonus not found!")
+            return
+        end
+    end
+
+    CACHE.INSTANT_KILL = {}
+    local patch = {}
+    
+    for _, a in ipairs(METHOD.INSTANT_KILL) do
+        -- Backup original
+        for i = 0, 2 do
+            table.insert(CACHE.INSTANT_KILL, {
+                address = a + (i * 4),
+                flags = gg.TYPE_DWORD,
+                value = gv(a + (i * 4), gg.TYPE_DWORD)
+            })
+        end
+        
+        -- Patch: Return 9999 damage
+        table.insert(patch, {
+            address = a,
+            flags = gg.TYPE_DWORD,
+            value = "hE0F98452"  -- mov w0, #9999
+        })
+        
+        table.insert(patch, {
+            address = a + 4,
+            flags = gg.TYPE_DWORD,
+            value = "hC0035FD6"  -- ret
+        })
+        
+        table.insert(patch, {
+            address = a + 8,
+            flags = gg.TYPE_DWORD,
+            value = "h00000000"  -- nop
+        })
+    end
+
+    -- **TAMBAHAN: Juga patch CalculateDamage di RangeAttackActivity**
+    if not METHOD.RANGE_DAMAGE then
+        local range_methods = findMethod("RangeAttackActivity", "CalculateDamage")
+        if #range_methods > 0 then
+            METHOD.RANGE_DAMAGE = range_methods
+            gg.toast("✅ Also found RangeAttackActivity.CalculateDamage")
+        end
+    end
+    
+    if METHOD.RANGE_DAMAGE then
+        for _, a in ipairs(METHOD.RANGE_DAMAGE) do
+            -- Backup range method
+            for i = 0, 2 do
+                table.insert(CACHE.INSTANT_KILL, {
+                    address = a + (i * 4),
+                    flags = gg.TYPE_DWORD,
+                    value = gv(a + (i * 4), gg.TYPE_DWORD)
+                })
+            end
+            
+            -- Patch range method juga
+            table.insert(patch, {
+                address = a,
+                flags = gg.TYPE_DWORD,
+                value = "hE0F98452"  -- mov w0, #9999
+            })
+            
+            table.insert(patch, {
+                address = a + 4,
+                flags = gg.TYPE_DWORD,
+                value = "hC0035FD6"  -- ret
+            })
+            
+            table.insert(patch, {
+                address = a + 8,
+                flags = gg.TYPE_DWORD,
+                value = "h00000000"  -- nop
+            })
+        end
+    end
+
+    -- Apply all patches
+    sv(patch)
+    STATE.INSTANT_KILL = true
+    gg.toast("☠️ INSTANT KILL ON - All Weapons (9999 Damage)")
 end
 
 
