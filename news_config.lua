@@ -6,14 +6,12 @@
 Welcome to Draboy Cloud Loader
     
 📢  CHANGELOG / UPDATE:
-    
-   🚇 Metro 2050 Survival
-        • 🔥 Fix something
-        • 🔥 Add New Mod Unlimited Gold
-    
 
+Please Update Script Loader script v3
+In my telegram group @DraboyGaming
+this version will be terminate
 
-Follow @DraboyGaming
+Thx Draboy
     ]],
     LAST_UPDATE = "12-01-2026"
 }
